@@ -1,0 +1,146 @@
+// Заголовки, общие БЄМ блоки и проче...
+.btn {
+    background: linear-gradient(184.53deg, #f9a43f 5.27%, #fb791b 91.78%);
+    border-radius: rem(9);
+    color: #fff;
+    padding: rem(7) rem(30);
+    display: inline-block;
+}
+
+.menu-catalog {
+    &__icon {
+    }
+
+    &__body {
+        transition: all 0.3s ease 0s;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: -100vw;
+        right: 0;
+        max-width: 100%;
+        background: #fffbf8;
+        box-shadow: 5px 6px 15px rgba(251, 121, 27, 0.63);
+        grid-template-columns: rem(255) 1fr;
+        display: grid;
+        opacity: 0;
+        visibility: hidden;
+        overflow-x: scroll;
+    }
+    &__wrap {
+        border-right: 2px solid rgba(42, 42, 42, 0.26);
+    }
+
+    &__title {
+        font-weight: 700;
+        margin: rem(15) 0px rem(20) rem(61);
+        line-height: math.div(19, 16);
+    }
+
+    &__list {
+        border-top: 2px solid rgba(42, 42, 42, 0.26);
+        padding: 0px 0px rem(35) 0px;
+    }
+
+    &__item {
+        transition: background 0.3s 0s;
+        position: relative;
+        @media (any-hover: hover) {
+            &:hover {
+                background: $accentColor;
+                ._icon-arrow-right {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+
+    &__link {
+        padding: rem(10) 0px rem(10) rem(30);
+        font-weight: 700;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+    }
+    .sub-menu-active {
+        background: #ffc176;
+    }
+    ._icon-arrow-right {
+        transition: all 0.3s ease 0s;
+        color: #c8c5c3;
+        background: none;
+        position: absolute;
+        right: rem(10);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.sub-menu-catalog {
+    font-weight: 700;
+    padding: 0px rem(55) rem(30) rem(30);
+    max-width: 100%;
+    max-height: 100%;
+    // overflow: auto;
+    // overflow-y: scroll;
+
+    &__block {
+        // display: none;
+        // opacity: 0;
+        // visibility: hidden;
+        // overflow-x: scroll;
+    }
+    // .sub-menu-open {
+    //     display: block;
+    //     opacity: 1;
+    //     visibility: visible;
+    // }
+
+    &__colums {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(55);
+    }
+
+    &__title {
+        margin: rem(15) 0px rem(35) 0px;
+        font-size: rem(20);
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__link {
+        display: block;
+        padding: rem(10) 0px rem(10);
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accentColor;
+            }
+        }
+    }
+}
+.menu-open-wrapper {
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $mainColor;
+    opacity: 0.75;
+}
+._active {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    // transition: all 0.3s ease 0s;
+}
+.main-title {
+    @include adaptiveValue("font-size", 32, 21);
+    line-height: math.div(32, 37);
+    font-weight: 700;
+}

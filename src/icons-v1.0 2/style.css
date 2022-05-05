@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?evj3at');
+  src:  url('fonts/icons.eot?evj3at#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?evj3at') format('truetype'),
+    url('fonts/icons.woff?evj3at') format('woff'),
+    url('fonts/icons.svg?evj3at#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"], [class*=" _icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-arrow-left:before {
+  content: "\e900";
+}
+._icon-arrow-right:before {
+  content: "\e901";
+}
+._icon-bin:before {
+  content: "\e902";
+}
+._icon-box-delivery:before {
+  content: "\e903";
+}
+._icon-car-delivery:before {
+  content: "\e904";
+}
+._icon-cart-contact:before {
+  content: "\e905";
+}
+._icon-cart:before {
+  content: "\e906";
+}
+._icon-change:before {
+  content: "\e907";
+}
+._icon-email-contact:before {
+  content: "\e908";
+}
+._icon-fb-reg:before {
+  content: "\e909";
+}
+._icon-fb:before {
+  content: "\e90a";
+}
+._icon-insta:before {
+  content: "\e90b";
+}
+._icon-location-contact:before {
+  content: "\e90c";
+}
+._icon-pay-card:before {
+  content: "\e90d";
+}
+._icon-pay-cash:before {
+  content: "\e90e";
+}
+._icon-pay-mastercard:before {
+  content: "\e90f";
+}
+._icon-pay-mir:before {
+  content: "\e910";
+}
+._icon-pay-visa:before {
+  content: "\e911";
+}
+._icon-people:before {
+  content: "\e912";
+}
+._icon-phone-contact:before {
+  content: "\e913";
+}
+._icon-phone:before {
+  content: "\e914";
+}
+._icon-search:before {
+  content: "\e915";
+}
+._icon-stock-delivery:before {
+  content: "\e916";
+}
+._icon-stroke-cart:before {
+  content: "\e917";
+}
+._icon-time-contact:before {
+  content: "\e918";
+}
+._icon-time:before {
+  content: "\e919";
+}
+._icon-user:before {
+  content: "\e91a";
+}
+._icon-vk-reg:before {
+  content: "\e91b";
+}
+._icon-vk:before {
+  content: "\e91c";
+}

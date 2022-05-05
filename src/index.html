@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="page__main-slider main-slider">
+				<!-- Оболочка слайдера -->
+				<div class="main-slider__slider swiper">
+					<!-- Двигающееся часть слайдера -->
+					<div class="main-slider__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="main-slider__slide swiper-slide">
+							<div class="main-slider__image">
+								<img src="@img/main-slider/01.jpg" alt="image">
+							</div>
+							<div class="main-slider__body">
+								<div class="main-slider__text">
+									<h4 class="main-slider__subtitle">Самая популярная карточная игра</h4>
+									<h3 class="main-slider__title">Magic: the Gathering</h3>
+								</div>
+								<a href="#" class="main-slider__btn btn">Подробнее</a>
+							</div>
+						</div>
+						<div class="main-slider__slide swiper-slide">
+							<div class="main-slider__image">
+								<img src="@img/main-slider/01.jpg" alt="image">
+							</div>
+							<div class="main-slider__body">
+								<div class="main-slider__text">
+									<h4 class="main-slider__subtitle">Самая популярная карточная игра</h4>
+									<h3 class="main-slider__title">Magic: the Gathering</h3>
+								</div>
+								<a href="#" class="main-slider__btn btn">Подробнее</a>
+							</div>
+						</div>
+						<div class="main-slider__slide swiper-slide">
+							<div class="main-slider__image">
+								<img src="@img/main-slider/01.jpg" alt="image">
+							</div>
+							<div class="main-slider__body">
+								<div class="main-slider__text">
+									<h4 class="main-slider__subtitle">Самая популярная карточная игра</h4>
+									<h3 class="main-slider__title">Magic: the Gathering</h3>
+								</div>
+								<a href="#" class="main-slider__btn btn">Подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="main-slider__pagination"></div>
+				</div>
+			</section>
+
+			<section class="page__catalog-block catalog-block">
+				<div class="catalog-block__container">
+					<h3 class="catalog-block__title main-title">Каталог</h3>
+					<ul class="catalog-block__list">
+						<li class="catalog-block__item catalog-block__item_big catalog-block__item-ibg">
+							<a href="#" class="catalog-block__link">
+								<img src="@img/catalog-block/01.jpg" alt="">
+								<div class="catalog-block__text">Настольные игры</div>
+							</a>
+						</li>
+						<li class="catalog-block__item catalog-block__item-ibg">
+							<a href="#" class="catalog-block__link">
+								<img src="@img/catalog-block/02.jpg" alt="">
+								<div class="catalog-block__text">Варгеймы</div>
+							</a>
+						</li>
+						<li class="catalog-block__item catalog-block__item-ibg">
+							<a href="#" class="catalog-block__link">
+								<img src="@img/catalog-block/03.jpg" alt="">
+								<div class="catalog-block__text">Краски</div>
+							</a>
+						</li>
+						<li class="catalog-block__item catalog-block__item-ibg">
+							<a href="#" class="catalog-block__link">
+								<img src="@img/catalog-block/04.jpg" alt="">
+								<div class="catalog-block__text">Magic:the Cathering</div>
+							</a>
+						</li>
+						<li class="catalog-block__item catalog-block__item-ibg">
+							<a href="#" class="catalog-block__link">
+								<img src="@img/catalog-block/05.jpg" alt="">
+								<div class="catalog-block__text">Весь каталог</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<div class="menu-open-catalog"></div>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
