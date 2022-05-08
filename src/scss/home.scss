@@ -6,6 +6,18 @@
         margin-bottom: rem(45);
     }
     &__catalog-block {
+        margin-bottom: rem(85);
+    }
+    &__time-buy {
+        margin-bottom: rem(65);
+    }
+    &__offer {
+        margin-bottom: rem(65);
+    }
+    &__event {
+        margin-bottom: rem(85);
+    }
+    &__more-info {
     }
 }
 
@@ -85,6 +97,7 @@
     height: rem(4);
     background: #929292;
     border-radius: rem(9);
+    cursor: pointer;
 }
 .swiper-pagination-bullet-active {
     width: rem(23);
@@ -101,25 +114,39 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: rem(30);
+        .catalog-btn {
+            display: none;
+        }
         @media (max-width: $tablet) {
             grid-template-columns: repeat(2, 1fr);
         }
         @media (max-width: 640px) {
             grid-template-columns: repeat(1, 1fr);
+            .catalog-btn {
+                max-width: rem(170);
+                margin: 0 auto;
+                display: block;
+            }
         }
     }
-
+    .all-catalog-link {
+        .catalog-block__text {
+            color: $accentColor;
+        }
+        @media (max-width: 640px) {
+            display: none;
+        }
+    }
     &__item {
         position: relative;
         border-radius: rem(9);
         overflow: hidden;
         box-shadow: 5px 6px 16px rgba(42, 42, 42, 0.25);
         padding-bottom: 75%;
-        // position: relative;
-        // img {
-        //     max-width: 100%;
-        //     object-fit: contain;
-        // }
+        @media (max-width: 640px) {
+            padding-bottom: 60%;
+        }
+
         &_big {
             grid-column: span 2;
             grid-row: span 2;
@@ -128,28 +155,93 @@
                 grid-row: span 1;
             }
         }
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: $mainColor;
-            height: 46px;
-        }
     }
 
     &__text {
         width: 100%;
         color: #fff;
         font-size: rem(18);
-        line-height: math.div(21, 18);
+        line-height: 240%;
         font-weight: 700;
         position: absolute;
-        bottom: 12px;
-        left: 19px;
+        bottom: 0;
+        left: 0;
         z-index: 1;
+        padding-left: rem(19);
+        background: $mainColor;
     }
 }
-.main-title {
+
+// ! time-buy (3 блок)
+.time-buy__title,
+.offer__title {
+    margin-bottom: rem(21);
+}
+.time-buy__slider,
+.offer__slider {
+    padding: rem(20) rem(15);
+}
+.time-buy__container,
+.offer__container {
+    padding: 0 rem(25);
+    position: relative;
+}
+.time-buy__button-next,
+.time-buy__button-prev,
+.offer__button-next,
+.offer__button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.time-buy__button-prev,
+.offer__button-prev {
+    left: rem(10);
+    transform: rotate(180deg);
+}
+.time-buy__button-next,
+.offer__button-next {
+    right: rem(10);
+}
+
+// ! event (4 блок)
+.event {
+
+    &__title {
+        margin-bottom: rem(21);
+    }
+
+    &__card {
+        margin-bottom: rem(38);
+    }
+
+    &__more {
+        text-align: center;
+    }
+    &__btn {
+        @include adaptiveValue("font-size", 23, 16);
+        padding: rem(22) rem(79);
+    }
+}
+
+// ! more-info (5 блок)
+.more-info {
+    &__card {
+        margin-bottom: rem(38);
+    }
+    &__title {
+        margin-bottom: rem(21);
+    }
+    &__more {
+        text-align: center;
+    }
+    &__btn {
+        color: $mainColor;
+        @include adaptiveValue("font-size", 23, 16);
+        padding: rem(22) rem(79);
+    }
+    .card-info__title {
+        color: #fff;
+
+    }
 }

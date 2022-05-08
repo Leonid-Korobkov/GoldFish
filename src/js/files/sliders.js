@@ -47,10 +47,10 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			// autoplay: {
-			// 	delay: 4000,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
 
 			// Пагинация
 			pagination: {
@@ -94,6 +94,128 @@ function initSliders() {
 				},
 			},
 			*/
+			// События
+			on: {
+
+			}
+		});
+	}
+
+	if (document.querySelector('.time-buy__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.time-buy__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			// centeredSlides: true,
+			spaceBetween: 30,
+			// autoHeight: true,
+			speed: 600,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.time-buy__button-prev',
+				nextEl: '.time-buy__button-next',
+			},
+
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				700: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1268: {
+					slidesPerView: 4,
+				},
+			},
+			// События
+			on: {
+
+			}
+		});
+	}
+
+	if (document.querySelector('.offer__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.offer__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			// centeredSlides: true,
+			spaceBetween: 30,
+			// autoHeight: true,
+			speed: 600,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.offer__button-prev',
+				nextEl: '.offer__button-next',
+			},
+
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				700: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1268: {
+					slidesPerView: 4,
+				},
+			},
 			// События
 			on: {
 
