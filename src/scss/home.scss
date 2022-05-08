@@ -6,18 +6,22 @@
         margin-bottom: rem(45);
     }
     &__catalog-block {
-        margin-bottom: rem(85);
+        @include adaptiveValue("margin-bottom", 85, 35);
     }
     &__time-buy {
-        margin-bottom: rem(65);
+        @include adaptiveValue("margin-bottom", 65, 15);
     }
     &__offer {
-        margin-bottom: rem(65);
+        @include adaptiveValue("margin-bottom", 65, 15);
     }
     &__event {
-        margin-bottom: rem(85);
+        @include adaptiveValue("margin-bottom", 85, 35);
     }
     &__more-info {
+        @include adaptiveValue("margin-bottom", 85, 35);
+    }
+    &__about {
+        @include adaptiveValue("margin-bottom", 85, 35);
     }
 }
 
@@ -106,14 +110,10 @@
 
 // ! catalog-block (2 блок)
 .catalog-block {
-    &__title {
-        margin-bottom: rem(22);
-    }
-
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: rem(30);
+        @include adaptiveValue("gap", 30, 15);
         .catalog-btn {
             display: none;
         }
@@ -173,10 +173,7 @@
 }
 
 // ! time-buy (3 блок)
-.time-buy__title,
-.offer__title {
-    margin-bottom: rem(21);
-}
+
 .time-buy__slider,
 .offer__slider {
     padding: rem(20) rem(15);
@@ -206,13 +203,8 @@
 
 // ! event (4 блок)
 .event {
-
-    &__title {
-        margin-bottom: rem(21);
-    }
-
     &__card {
-        margin-bottom: rem(38);
+        @include adaptiveValue("margin-bottom", 38, 15);
     }
 
     &__more {
@@ -220,17 +212,14 @@
     }
     &__btn {
         @include adaptiveValue("font-size", 23, 16);
-        padding: rem(22) rem(79);
+        padding: rem(22) rem(75);
     }
 }
 
 // ! more-info (5 блок)
 .more-info {
     &__card {
-        margin-bottom: rem(38);
-    }
-    &__title {
-        margin-bottom: rem(21);
+        @include adaptiveValue("margin-bottom", 38, 15);
     }
     &__more {
         text-align: center;
@@ -238,10 +227,59 @@
     &__btn {
         color: $mainColor;
         @include adaptiveValue("font-size", 23, 16);
-        padding: rem(22) rem(79);
+        padding: rem(22) rem(75);
+        border-width: 3px;
     }
     .card-info__title {
         color: #fff;
+    }
+}
 
+// ! about (6 блок)
+.about {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include adaptiveValue("gap", 30, 15);
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+            .about__text {
+                order: 1;
+            }
+            .about__image {
+                order: -1;
+            }
+            .about__title {
+                order: -2;
+            }
+        }
+    }
+
+    &__info {
+    }
+
+    &__title {
+    }
+
+    &__text {
+        line-height: math.div(21 , 16);
+    }
+
+    &__paragraph {
+        &:not(:last-child) {
+            margin-bottom: rem(18);
+        }
+        text-align: justify;
+    }
+
+    &__image {
+        overflow: hidden;
+        border-radius: rem(9);
+        box-shadow: 5px 6px 16px rgba(42, 42, 42, 0.2);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }

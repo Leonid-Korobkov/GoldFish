@@ -154,8 +154,9 @@
 }
 .main-title {
     @include adaptiveValue("font-size", 32, 21);
-    line-height: math.div(32, 37);
+    line-height: 1.2;
     font-weight: 700;
+    @include adaptiveValue("margin-bottom", 21, 15);
 }
 
 // ! Карточка товара
@@ -275,12 +276,12 @@
     }
 }
 
-// ! Карточка с информацие
+// ! Карточка с информацией
 .card-info {
     &__list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-        gap: 30px;
+        @include adaptiveValue("gap", 30, 15);
         @media (max-width: 720px) {
             // grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
             display: flex;
