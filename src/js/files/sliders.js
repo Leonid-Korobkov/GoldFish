@@ -208,6 +208,7 @@ function initSliders() {
 				},
 				700: {
 					slidesPerView: 2,
+					speed: 300,
 				},
 				992: {
 					slidesPerView: 3,

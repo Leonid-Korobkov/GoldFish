@@ -389,6 +389,60 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="page__contact contact">
+				<div class="contact__container">
+					<h3 class="contact__title main-title">Контакты</h3>
+					<div class="contact__info">
+						<div class="contact__connect">
+							<address class="contact__address">
+								<ul class="contact__list">
+									<li class="contact__item">
+										<div class="_icon-phone contact__icon"></div>
+										<a href="tel:+74959111011" class="contact__phone"><span>Телефон:</span>+7 (495) 911-10-11</a>
+									</li>
+									<li class="contact__item">
+										<div class="_icon-email-contact contact__icon"></div>
+										<a href="mailto:msk@magicgoldfish.ru" class="contact__email"><span>E-mail:</span>msk@magicgoldfish.ru</a>
+									</li>
+									<li class="contact__item">
+										<div class="_icon-location-contact contact__icon"></div>
+										<a href="https://yandex.ru/maps/?from=mapframe&ll=37.657175%2C55.744808&source=mapframe&um=constructor%3A6fe0c896f5deee5681c5d32ed157930bb5caafcdbebaa25b4162045891ee3ca1&utm_source=mapframe&z=16.25" target="_blank" class="contact__location"><span>Адрес:</span>Москва ст.м. Таганская (кольцевая) Малый Дровяной переулок 6</a>
+									</li>
+									<li class="contact__item">
+										<div class="_icon-time-contact contact__icon"></div>
+										<div class="contact__timetable"><span>Режим работы клуба:</span>11:00-23:00 (ежедневно)</div>
+									</li>
+								</ul>
+							</address>
+							<div class="contact__questions">
+								<h5 class="contact__subtitle">Остались вопросы?</h5>
+								<form action="#" class="contact__form-questions form-questions">
+									<div class="form-questions__item">
+										<label for="form-questions__name">Ваше имя</label>
+										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имя" class="form-questions__input form-questions__name" id="form-questions__name">
+									</div>
+									<div class="form-questions__item">
+										<label for="form-questions__phone">Ваш телефон</label>
+										<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="+7 ___ _______" class="form-questions__input form-questions__phone" id="form-questions__phone">
+									</div>
+									<div class="form-questions__item">
+										<label for="form-questions__comment">Ваш комментарий</label>
+										<!-- <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Комментарий" class="form-questions__input form-questions__comment" id="form-questions__comment"> -->
+										<textarea name="form[]" id="form-questions__comment" placeholder="Комментарий" class="form-questions__input form-questions__comment"></textarea>
+									</div>
+										
+									<button type="submit" class="form-questions__btn btn">Заказать звонок</button>
+									<div class="form-questions__agree">Нажимая на кнопку "Заказать звонок", я даю <a href="#">согласие на обработку персональных данных.</a></div>
+								</form>
+							</div>
+						</div>
+						<div data-da=".contact__connect, 767.98, 1" class="contact__map">
+							<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6fe0c896f5deee5681c5d32ed157930bb5caafcdbebaa25b4162045891ee3ca1&amp;source=constructor" frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<div class="menu-open-catalog"></div>
 		@@include('html/_footer.htm',{})

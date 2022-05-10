@@ -3,24 +3,17 @@
 //====================================================================================================
 .page {
     &__main-slider {
-        margin-bottom: rem(45);
+        @include adaptiveValue("margin-bottom", 45, 25);
     }
-    &__catalog-block {
-        @include adaptiveValue("margin-bottom", 85, 35);
-    }
-    &__time-buy {
-        @include adaptiveValue("margin-bottom", 65, 15);
-    }
+    &__time-buy,
     &__offer {
         @include adaptiveValue("margin-bottom", 65, 15);
     }
-    &__event {
-        @include adaptiveValue("margin-bottom", 85, 35);
-    }
+    &__catalog-block,
+    &__event,
+    &__contact,
+    &__about,
     &__more-info {
-        @include adaptiveValue("margin-bottom", 85, 35);
-    }
-    &__about {
         @include adaptiveValue("margin-bottom", 85, 35);
     }
 }
@@ -262,7 +255,7 @@
     }
 
     &__text {
-        line-height: math.div(21 , 16);
+        line-height: math.div(21, 16);
     }
 
     &__paragraph {
@@ -280,6 +273,107 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+}
+
+// ! contact (7 блок)
+.contact {
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include adaptiveValue("gap", 120, 10, 1140, 768);
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__connect {
+    }
+
+    &__address {
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(25);
+        @include adaptiveValue("font-size", 19, 16);
+        line-height: math.div(22, 19);
+        span {
+            font-weight: 700;
+        }
+        @include adaptiveValue("margin-bottom", 35, 15);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: rem(25);
+        ._icon-email-contact::before {
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+    }
+    &__icon {
+        @include adaptiveValue("font-size", 30, 20);
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: rem(22);
+        line-height: math.div(26, 22);
+        @include adaptiveValue("margin-bottom", 21, 15);
+    }
+
+    &__form-questions {
+    }
+
+    &__map {
+        iframe {
+            border-radius: rem(9);
+            width: 100%;
+            height: 100%;
+            @media (max-width: $mobile) {
+                height: rem(300);
+                width: 100%;
+                margin-bottom: rem(25);
+            }
+        }
+    }
+}
+.form-questions {
+    &__item {
+        margin-bottom: rem(15);
+        label {
+            display: block;
+            margin-bottom: rem(7);
+        }
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid rgba($mainColor, $alpha: 0.33);
+        padding: rem(14) rem(20);
+        border-radius: rem(9);
+        &::placeholder {
+            color: rgba($mainColor, $alpha: 0.33);
+            font-size: rem(15);
+        }
+    }
+    &__comment {
+        height: rem(90);
+        resize: none
+    }
+    &__btn {
+        @include adaptiveValue("font-size", 19, 16);
+        @include adaptiveValue("padding", 12, 10);
+        width: 100%;
+        margin-bottom: rem(15);
+    }
+
+    &__agree {
+        a {
+            text-decoration: underline;
         }
     }
 }
