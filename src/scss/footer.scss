@@ -1,3 +1,207 @@
-//====================================================================================================
+.footer {
+    background: $mainColor;
+    color: #fff;
 
-//====================================================================================================
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__bottom {
+    }
+}
+.footer-body {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    @media (max-width: em(380)){
+        text-align: center;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: rem(200) 1fr rem(225);
+        @include adaptiveValue("gap", 50, 30);
+        @include adaptiveValue("padding-top", 60, 40);
+        @include adaptiveValue("padding-bottom", 86, 15);
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__main {
+    }
+
+    &__logo {
+        margin-bottom: rem(15);
+        line-height: math.div(19, 16);
+    }
+
+    &__address {
+        width: 100%;
+    }
+
+    &__link {
+        width: 100%;
+        display: block;
+    }
+
+    &__menu {
+    }
+
+    &__actions {
+    }
+}
+.footer-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+    @media (max-width: em(380)) {
+        grid-template-columns: 1fr;
+    }
+
+    &__column {
+    }
+
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 19, 16);
+        margin-bottom: rem(9);
+        line-height: math.div(22, 19);
+        ._spoller-init & {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            @extend ._icon-arrow-left;
+            &::before {
+                font-size: rem(14);
+                transition: all 0.3s ease 0s;
+                content: "\e901";
+                @extend %ic;
+            }
+        }
+        &._spoller-active {
+            &::before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__button {
+    }
+
+    &__body {
+    }
+
+    &__link-catalog {
+        display: block;
+        line-height: math.div(20, 16);
+        &:not(:last-child) {
+            margin-bottom: rem(5);
+        }
+        @media (max-width: em(380)){
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+    }
+
+    &__list {
+    }
+
+    &__item {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 19, 16);
+        line-height: math.div(22, 19);
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+}
+.actions-footer {
+    text-align: right;
+    font-weight: 700;
+    line-height: math.div(19, 16);
+    @media (max-width: $tablet) {
+        text-align: left;
+    }
+    @media (max-width: em(380)){
+        text-align: center;
+    }
+    &__btn {
+        margin-bottom: rem(26);
+        width: 100%;
+        @media (max-width: $tablet) {
+            width: rem(225);
+            display: block;
+        }
+        @media (max-width: em(380)){
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__phone {
+        margin-bottom: rem(6);
+    }
+
+    &__email {
+        display: block;
+        white-space: nowrap;
+        margin-bottom: rem(15);
+    }
+
+    &__social-link {
+        justify-content: flex-end;
+        @media (max-width: $tablet) {
+            justify-content: start;
+        }
+        @media (max-width: em(380)){
+            justify-content: center;
+        }
+    }
+}
+.footer-bottom {
+    padding: rem(30) 0;
+    font-size: 15px;
+    line-height: math.div(17, 15);
+    color: rgba(255, 255, 255, 0.44);
+    @media (max-width: $mobile) {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(15);
+        @media (max-width: $mobile) {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            .pay-cards {
+                order: 3;
+            }
+        }
+    }
+
+    &__copy-text a,
+    &__agree-text a {
+        display: block;
+        text-decoration: underline;
+    }
+    &__agree {
+        text-align: right;
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
+    }
+}
+.pay-cards {
+    display: grid;
+    grid-auto-flow: column;
+    gap: rem(11);
+    &__item {
+    }
+}

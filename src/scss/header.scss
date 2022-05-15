@@ -68,7 +68,14 @@
 	align-items: center;
 	font-size: rem(26);
 	margin-left: rem(20);
-
+	a:not(.actions-header__phone){
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover){
+			&:hover{
+				transform: scale(1.2);
+			}
+		}
+	}
 	&__phone {
 		@include adaptiveValue("margin-right", 62, 20, 1140, 768);
 		font-weight: 700;
@@ -110,6 +117,7 @@
 			justify-content: center;
 		}
 	}
+	
 }
 .bottom-header {
 	@media (max-width: $tablet) {
@@ -245,3 +253,13 @@
 		}
 	}
 }
+.icon-menu:hover {
+	@media (any-hover: hover){
+		&:hover{
+			span {
+				transform: translateX(-6px);
+			}
+		}
+	}
+}
+

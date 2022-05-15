@@ -17,7 +17,15 @@
     line-height: math.div(19, 16);
     padding: rem(7) rem(19);
 }
-
+.btn-footer {
+    text-align: center;
+    padding: rem(15) rem(10);
+    border: 1px solid $accentColor;
+    font-size: rem(19);
+}
+address {
+    font-style: normal;
+}
 // ! Меню и др
 .menu-catalog {
     &__icon {
