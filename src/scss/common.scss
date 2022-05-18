@@ -166,6 +166,14 @@ address {
     font-weight: 700;
     @include adaptiveValue("margin-bottom", 21, 15);
 }
+.title-catalog {
+    font-weight: 700;
+    font-size: rem(19);
+    line-height: math.div(22, 19);
+}
+.title-catalog_subtitle {
+    margin-bottom: rem(15);
+}
 
 // ! Карточка товара
 .product {
@@ -304,16 +312,15 @@ address {
         position: relative;
         overflow: hidden;
         min-height: 434px;
-        transition: all .5s ease 0s;
-        @media (any-hover: hover) and (min-width: 720px){
-            &:hover{
+        transition: all 0.5s ease 0s;
+        @media (any-hover: hover) and (min-width: 720px) {
+            &:hover {
                 transform: scale(1.03);
             }
         }
     }
 
     &__link {
-        
         height: 100%;
     }
 
@@ -356,5 +363,118 @@ address {
 
     &__subtitle {
         line-height: math.div(21, 16);
+    }
+}
+
+// ! Breadcrumbs
+.breadcrumbs {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        &::after {
+            content: "\e901";
+            @extend %ic;
+            font-size: 10px;
+            margin: 0 rem(12);
+        }
+    }
+
+    &__current {
+        color: rgba(42, 42, 42, 0.38);
+    }
+}
+
+// ! Pagging
+.pagging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 700;
+    &__arrow_left {
+        display: inline-block;
+        transform: rotate(180deg);
+    }
+
+    &__list {
+        display: flex;
+        margin: 0 rem(15);
+    }
+    li {
+        &:not(:last-child) {
+            margin-right: rem(5);
+        }
+    }
+    &__item {
+        display: inline-block;
+        padding: rem(5);
+        &._active {
+            border: 1px solid $mainColor;
+            border-radius: rem(7);
+        }
+    }
+}
+
+// ! Checkbox
+.checkbox {
+    &:not(:last-child) {
+        margin-bottom: rem(15);
+    }
+    &__label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        appearance: none;
+        &:checked + .checkbox__fake:before {
+            transform: scale(1);
+        }
+        &:checked ~ .checkbox__text {
+            color: rgba(42, 42, 42, 1);
+            font-weight: 700;
+        }
+        &:focus + .checkbox__fake {
+            transition: all 0.2s ease 0s;
+            border: 1px solid rgba($accentColor, $alpha: 1);
+            box-shadow: 0 0 10px 0 $accentColor;
+        }
+        &:checked:focus + .checkbox__fake {
+            border: 1px solid rgba($mainColor, $alpha: 0.38);
+            box-shadow: 0 0 0 0;
+        }
+    }
+    &__text {
+        transition: all 0.2s ease 0s;
+        color: rgba(42, 42, 42, 0.85);
+    }
+    &__fake {
+        width: rem(21);
+        height: rem(21);
+        flex: 0 0 21px;
+        border: 1px solid rgba($mainColor, $alpha: 0.38);
+        border-radius: rem(7);
+        margin-right: rem(13);
+        &::before {
+            transition: all 0.2s ease 0s;
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url("@img/icons/check.svg") center center no-repeat;
+            transform: scale(0);
+        }
     }
 }

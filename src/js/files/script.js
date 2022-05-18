@@ -18,4 +18,12 @@ function documentActions(e) {
         }
         e.preventDefault()
     }
+    if (targetElement.closest('.catalog-navigation__text')) {
+        const filterOpen = document.querySelector('.catalog-navigation__filter');
+        filterOpen.classList.toggle('active')
+    }
+    if (targetElement.closest('.catalog-navigation__back') || targetElement.closest('.filter-catalog__btn')) {
+        const filterOpen = document.querySelector('.catalog-navigation__filter');
+        filterOpen.classList.remove('active')
+    }
 }

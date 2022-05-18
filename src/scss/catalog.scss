@@ -1,0 +1,190 @@
+.page {
+    &__news-image {
+    }
+    &__catalog {
+    }
+}
+
+// ! news-image (1 блок)
+.news-image {
+    @media (max-width: $tablet) {
+        display: none;
+    }
+    &__block {
+        width: 100%;
+        height: rem(234);
+    }
+
+    &__container {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 rem(15);
+        padding: 0;
+    }
+
+    &__text {
+        color: #fff;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(22);
+        line-height: math.div(26, 22);
+        margin-bottom: rem(16);
+    }
+
+    &__subtitle {
+        line-height: math.div(19, 16);
+        max-width: 50%;
+    }
+}
+
+// ! catalog (2 блок)
+.catalog-navigation {
+    @include adaptiveValue("margin-top", 29, 15);
+    .breadcrumbs {
+        margin-bottom: rem(9);
+    }
+    &__title {
+        transition: all 0.3s ease 0s;
+        padding-right: rem(20);
+    }
+    &__filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        transition: all 0.3s ease 0s;
+        &.active {
+            & {
+                padding-bottom: rem(60);
+            }
+            .catalog-navigation__back {
+                left: 50%;
+            }
+            .filter-catalog {
+                transform: translate(0);
+            }
+        }
+    }
+    &__filter-open {
+        display: none;
+        align-items: center;
+        .catalog-navigation__back {
+            transition: all 0.3s ease 0s;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            position: absolute;
+            top: 50%;
+            left: 150%;
+            transform: translateX(-50%);
+        }
+        .catalog-navigation__text {
+            text-decoration: underline;
+        }
+        &::before {
+            padding-right: rem(4);
+        }
+        @media (max-width: em(860)) {
+            display: flex;
+        }
+    }
+}
+.catalog {
+    @include adaptiveValue("margin-bottom", 85, 35);
+
+    .product__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+        gap: rem(30);
+        @include adaptiveValue("margin-bottom", 61, 25);
+    }
+    &__body {
+        display: grid;
+        grid-template-columns: rem(255) 1fr;
+        align-items: start;
+        gap: rem(30);
+        @media (max-width: em(860)) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.filter-catalog {
+    background: #ffffff;
+    box-shadow: 5px 6px 16px rgba(42, 42, 42, 0.16);
+    border-radius: rem(9);
+    max-height: auto;
+    @media (max-width: em(860)) {
+        transition: all 0.3s ease 0s;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        transform: translate(-100vw);
+    }
+    &__link-mobile {
+        @media (min-width: em(860)) {
+            display: none;
+        }
+    }
+    &__section {
+        &:not(:last-child) {
+            border-bottom: 2px solid rgba(42, 42, 42, 0.12);
+        }
+        padding: rem(28) rem(22) rem(28);
+    }
+    &__content {
+        margin-top: rem(16);
+        .filter-catalog__list {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        &::before {
+            transition: all 0.3s ease 0s;
+            font-size: rem(15);
+        }
+        &._spoller-active {
+            &::before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+    &__body {
+        padding-left: rem(10);
+        margin-top: rem(14);
+    }
+    &__list {
+        margin-bottom: rem(25);
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+    }
+
+    &__link {
+        display: block;
+        font-weight: 700;
+        font-size: rem(19);
+    }
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        margin-top: rem(36);
+    }
+}

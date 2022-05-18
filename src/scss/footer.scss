@@ -1,15 +1,6 @@
 .footer {
     background: $mainColor;
     color: #fff;
-
-    &__container {
-    }
-
-    &__body {
-    }
-
-    &__bottom {
-    }
 }
 .footer-body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -26,10 +17,6 @@
             grid-template-columns: 1fr;
         }
     }
-
-    &__main {
-    }
-
     &__logo {
         margin-bottom: rem(15);
         line-height: math.div(19, 16);
@@ -43,12 +30,6 @@
         width: 100%;
         display: block;
     }
-
-    &__menu {
-    }
-
-    &__actions {
-    }
 }
 .footer-menu {
     display: grid;
@@ -56,9 +37,6 @@
     gap: rem(20);
     @media (max-width: em(380)) {
         grid-template-columns: 1fr;
-    }
-
-    &__column {
     }
 
     &__title {
@@ -87,12 +65,6 @@
         }
     }
 
-    &__button {
-    }
-
-    &__body {
-    }
-
     &__link-catalog {
         display: block;
         line-height: math.div(20, 16);
@@ -104,9 +76,6 @@
                 margin-bottom: rem(10);
             }
         }
-    }
-
-    &__list {
     }
 
     &__item {
@@ -202,6 +171,4 @@
     display: grid;
     grid-auto-flow: column;
     gap: rem(11);
-    &__item {
-    }
 }

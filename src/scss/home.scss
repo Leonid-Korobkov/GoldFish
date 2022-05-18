@@ -131,6 +131,7 @@
         }
     }
     &__item {
+        transition: all 0.5s ease 0s;
         position: relative;
         border-radius: rem(9);
         overflow: hidden;
@@ -138,6 +139,11 @@
         padding-bottom: 75%;
         @media (max-width: 640px) {
             padding-bottom: 60%;
+        }
+        @media (any-hover: hover){
+            &:hover{
+                transform: scale(1.05);
+            }
         }
 
         &_big {
@@ -288,12 +294,6 @@
         }
     }
 
-    &__connect {
-    }
-
-    &__address {
-    }
-
     &__list {
         display: flex;
         flex-direction: column;
@@ -324,10 +324,6 @@
         line-height: math.div(26, 22);
         @include adaptiveValue("margin-bottom", 21, 15);
     }
-
-    &__form-questions {
-    }
-
     &__map {
         iframe {
             border-radius: rem(9);
