@@ -37,6 +37,16 @@
         transform: translate(-50%, 50px) rotate(360deg);
     }
 }
+@keyframes animateShow {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 .btn {
     background: linear-gradient(184.53deg, #f9a43f 5.27%, #fb791b 91.78%);
     border-radius: rem(9);
