@@ -28,7 +28,7 @@ flsFunctions.isWebp();
 /* Добавление класса touch для HTML если браузер мобильный */
 flsFunctions.addTouchClass();
 /* Добавление loaded для HTML после полной загрузки страницы */
-// flsFunctions.addLoadedClass();
+flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
 flsFunctions.menuInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
@@ -60,7 +60,7 @@ flsFunctions.tabs();
 Документация: https://template.fls.guru/template-docs/funkcional-popup.html
 Сниппет (HTML): pl
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль параллакса мышью
@@ -76,14 +76,14 @@ import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-flsForms.formFieldsInit({ viewPass: false });
+flsForms.formFieldsInit({ viewPass: true });
 
 /* Oтправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
 // flsForms.formSubmit();
 
 /* Модуль формы "колличество" */
-// flsForms.formQuantity();
+flsForms.formQuantity();
 
 /* Модуль звездного рейтинга */
 // flsForms.formRating();
@@ -98,7 +98,7 @@ flsForms.formFieldsInit({ viewPass: false });
 Документация плагина: https://github.com/RobinHerbots/inputmask
 Сниппет(HTML):
 */
-// import "./files/forms/inputmask.js";
+import "./files/forms/inputmask.js";
 
 /* Модуль работы с ползунком */
 /*
@@ -107,7 +107,7 @@ flsForms.formFieldsInit({ viewPass: false });
 Документация плагина: https://refreshless.com/nouislider/
 Сниппет (HTML): range
 */
-// import "./files/forms/range.js";
+import "./files/forms/range.js";
 
 /* Модуль работы с подсказками (tippy) */
 /*

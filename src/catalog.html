@@ -5,557 +5,542 @@
 })
 
 <body>
-    <div class="wrapper">
-        @@include('html/_header.htm',{})
-        <main class="page">
-            <section class="page__news-image news-image">
-                <div class="news-image__block news-image__block-ibg">
-                    <img src="@img/news-image/01.jpg" alt="Картинка">
-                    <div class="news-image__container">
-                        <div class="news-image__text">
-                            <h3 class="news-image__title">Октябрьский турнир Warhammer 40000</h3>
-                            <div class="news-image__subtitle">У тебя есть команда и вы готовы принять участие в турнире
-                                Warhammer 40000? </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="page__catalog-navigation catalog-navigation">
-                <div class="catalog-navigation__container">
-                    <nav class="breadcrumbs">
-                        <ul class="breadcrumbs__list">
-                            <li class="breadcrumbs__item">
-                                <a href="index.html" class="breadcrumbs__link">Главная</a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a href="#" class="breadcrumbs__link">Каталог</a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <span href="#" class="breadcrumbs__current">Дуэльные игры</span>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="catalog-navigation__filter">
-                        <div class="catalog-navigation__title main-title">Дуэльные настольные игры</div>
-                        <div class="catalog-navigation__filter-open _icon-filter">
-                            <button class="catalog-navigation__text">Фильтр</button>
-                            <button class="catalog-navigation__back _icon-arrow-left">Назад</button>
-                        </div>
-                    </div>  
-                </div>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="page__news-image news-image">
+        <div class="news-image__block news-image__block-ibg">
+          <img src="@img/news-image/01.jpg" alt="Картинка">
+          <div class="news-image__container">
+            <div class="news-image__text">
+              <h3 class="news-image__title">Октябрьский турнир Warhammer 40000</h3>
+              <div class="news-image__subtitle">У тебя есть команда и вы готовы принять участие в турнире
+                Warhammer 40000? </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <section class="page__catalog catalog">
-                <div class="catalog__container">
-                    <div class="catalog__body">
-                        <div data-spollers data-da=".catalog-navigation__filter-open, 860" class="catalog__filter filter-catalog">
-                            <div class="filter-catalog__section">
-                                <button type="button" data-spoller
-                                    class="filter-catalog__title title-catalog _icon-arrow-right _spoller-active">Все
-                                    категории</button>
-                                <div class="filter-catalog__body">
-                                    <div data-spollers class="filter-catalog__sublist">
-                                        <div class="filter-catalog__item">
-                                            <button type="button" data-spoller
-                                                class="filter-catalog__title title-catalog title-catalog_subtitle _icon-arrow-right">Настольные
-                                                игры</button>
-                                            <ul class="filter-catalog__list">
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Вечериночные игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Детективные игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Детские игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Карточные игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Классические игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Книги-игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Кооперативные игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Наборы игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Приключенческие игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Семейные игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Стратегические игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Хардкорные игры</span>
-                                                    </label>
-                                                </li>
-                                                <li class="filter-catalog__item checkbox">
-                                                    <label class="checkbox__label">
-                                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                                            value="Вечериночные игры">
-                                                        <span class="checkbox__fake"></span>
-                                                        <span class="checkbox__text">Экономические игры</span>
-                                                    </label>
-                                                </li>
-                                                <!-- <li class="filter-catalog__item checkbox">
+      <div class="page__main-navigation main-navigation">
+        <div class="main-navigation__container">
+          <nav class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="index.html" class="breadcrumbs__link">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">Каталог</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <span href="#" class="breadcrumbs__current">Дуэльные игры</span>
+              </li>
+            </ul>
+          </nav>
+          <div class="main-navigation__filter">
+            <div class="main-navigation__title main-title">Дуэльные настольные игры</div>
+            <div class="main-navigation__filter-open _icon-filter">
+              <button class="main-navigation__text">Фильтр</button>
+              <button class="main-navigation__back _icon-arrow-left">Назад</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="page__catalog catalog">
+        <div class="catalog__container">
+          <div class="catalog__body">
+            <div data-spollers data-da=".main-navigation__filter-open, 860" class="catalog__filter filter-catalog">
+              <div class="filter-catalog__section">
+                <button type="button" data-spoller
+                  class="filter-catalog__title title-catalog _icon-arrow-right _spoller-active">Все
+                  категории</button>
+                <div class="filter-catalog__body">
+                  <div data-spollers class="filter-catalog__sublist">
+                    <div class="filter-catalog__item">
+                      <button type="button" data-spoller
+                        class="filter-catalog__title title-catalog title-catalog_subtitle _icon-arrow-right">Настольные
+                        игры</button>
+                      <ul class="filter-catalog__list">
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Вечериночные игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Детективные игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Детские игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Карточные игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Классические игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Книги-игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Кооперативные игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Наборы игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Приключенческие игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Семейные игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Стратегические игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Хардкорные игры</span>
+                          </label>
+                        </li>
+                        <li class="filter-catalog__item checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">Экономические игры</span>
+                          </label>
+                        </li>
+                        <!-- <li class="filter-catalog__item checkbox">
                                                     <input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
                                                     <label for="c_1" class="checkbox__label"><span class="checkbox__text">Вечериночные игры</span></label>
                                                 </li> -->
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="filter-catalog__links">
-                                        <a href="#" class="filter-catalog__link">Warhammer 40000</a>
-                                        <a href="#" class="filter-catalog__link">Magic: the Gathering</a>
-                                        <a href="#" class="filter-catalog__link">Аксессуры для игр</a>
-                                        <a href="#" class="filter-catalog__link">Краски</a>
-                                        <a href="#" class="filter-catalog__link">Товары для детей</a>
-                                        <a href="#" class="filter-catalog__link">Аксессуары для моделизма</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-spollers class="filter-catalog__section">
-                                <button type="button" data-spoller
-                                    class="filter-catalog__title title-catalog _icon-arrow-right">Цена</button>
-                                <div class="filter-catalog__content">
-                                    <label class="checkbox__label">
-                                        <input class="checkbox__input" type="checkbox" name="form[]"
-                                            value="Вечериночные игры">
-                                        <span class="checkbox__fake"></span>
-                                        <span class="checkbox__text">Только со скидкой</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div data-spollers class="filter-catalog__section">
-                                <button type="button" data-spoller
-                                    class="filter-catalog__title title-catalog _icon-arrow-right">Возрасты</button>
-                                <div class="filter-catalog__content">
-                                    <ul class="filter-catalog__list">
-                                        <li class="filter-catalog__item checkbox">
-                                            <label class="checkbox__label">
-                                                <input class="checkbox__input" type="checkbox" name="form[]"
-                                                    value="Вечериночные игры">
-                                                <span class="checkbox__fake"></span>
-                                                <span class="checkbox__text">3-5 лет</span>
-                                            </label>
-                                        </li>
-                                        <li class="filter-catalog__item checkbox">
-                                            <label class="checkbox__label">
-                                                <input class="checkbox__input" type="checkbox" name="form[]"
-                                                    value="Вечериночные игры">
-                                                <span class="checkbox__fake"></span>
-                                                <span class="checkbox__text">6-7 лет</span>
-                                            </label>
-                                        </li>
-                                        <li class="filter-catalog__item checkbox">
-                                            <label class="checkbox__label">
-                                                <input class="checkbox__input" type="checkbox" name="form[]"
-                                                    value="Вечериночные игры">
-                                                <span class="checkbox__fake"></span>
-                                                <span class="checkbox__text">8-12 лет</span>
-                                            </label>
-                                        </li>
-                                        <li class="filter-catalog__item checkbox">
-                                            <label class="checkbox__label">
-                                                <input class="checkbox__input" type="checkbox" name="form[]"
-                                                    value="Вечериночные игры">
-                                                <span class="checkbox__fake"></span>
-                                                <span class="checkbox__text">13-15 лет</span>
-                                            </label>
-                                        </li>
-                                        <li class="filter-catalog__item checkbox">
-                                            <label class="checkbox__label">
-                                                <input class="checkbox__input" type="checkbox" name="form[]"
-                                                    value="Вечериночные игры">
-                                                <span class="checkbox__fake"></span>
-                                                <span class="checkbox__text">16-17 лет</span>
-                                            </label>
-                                        </li>
-                                        <li class="filter-catalog__item checkbox">
-                                            <label class="checkbox__label">
-                                                <input class="checkbox__input" type="checkbox" name="form[]"
-                                                    value="Вечериночные игры">
-                                                <span class="checkbox__fake"></span>
-                                                <span class="checkbox__text">более 18 лет</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div data-spollers class="filter-catalog__section">
-                                <button type="button" data-spoller
-                                    class="filter-catalog__title title-catalog _icon-arrow-right">Наличие</button>
-                                <div class="filter-catalog__content">
-                                    <ul class="filter-catalog__list">
-                                        <li class="filter-catalog__item checkbox">
-                                            <label class="checkbox__label">
-                                                <input class="checkbox__input" type="checkbox" name="form[]"
-                                                    value="Вечериночные игры">
-                                                <span class="checkbox__fake"></span>
-                                                <span class="checkbox__text">в наличии</span>
-                                            </label>
-                                        </li>
-                                        <li class="filter-catalog__item checkbox">
-                                            <label class="checkbox__label">
-                                                <input class="checkbox__input" type="checkbox" name="form[]"
-                                                    value="Вечериночные игры">
-                                                <span class="checkbox__fake"></span>
-                                                <span class="checkbox__text">под заказ</span>
-                                            </label>
-                                        </li>
-                                        <li class="filter-catalog__item checkbox">
-                                            <label class="checkbox__label">
-                                                <input class="checkbox__input" type="checkbox" name="form[]"
-                                                    value="Вечериночные игры">
-                                                <span class="checkbox__fake"></span>
-                                                <span class="checkbox__text">нет в наличии</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div data-spollers class="filter-catalog__section">
-                                <button type="button" data-spoller
-                                    class="filter-catalog__title title-catalog _icon-arrow-right _spoller-active">Количество игроков</button>
-                                <div class="filter-catalog__content">
-                                    <ul class="filter-catalog__list">
-                                        <li class="filter-catalog__item checkbox">
-                                            <label class="checkbox__label">
-                                                <input class="checkbox__input" type="checkbox" name="form[]"
-                                                    value="Вечериночные игры">
-                                                <span class="checkbox__fake"></span>
-                                                <span class="checkbox__text">в наличии</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <button class="filter-catalog__btn btn">Применить</button>
-                            </div>
-                        </div>
-                        <div class="catalog__content">
-                            <ul class="product__list">
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/01.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">Warhammer 40,000: Chaos Space Marines</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/02.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">На марсе</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/03.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">Broken Realms: Horrek's Dreadlance</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/01.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">Warhammer 40,000: Chaos Space Marines</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/02.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">На марсе</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/03.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">Broken Realms: Horrek's Dreadlance</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/01.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">Warhammer 40,000: Chaos Space Marines</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/02.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">На марсе</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/03.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">Broken Realms: Horrek's Dreadlance</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/01.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">Warhammer 40,000: Chaos Space Marines</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/02.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">На марсе</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                                <li class="product__item">
-                                    <div class="product__image">
-                                        <img src="@img/products-images/03.png" alt="Фотография игры">
-                                    </div>
-                                    <div class="product__short-description">
-                                        <div class="product__count _icon-people">2-4</div>
-                                        <div class="product__time _icon-time">30-60</div>
-                                        <div class="product__age">18+</div>
-                                    </div>
-                                    <div class="product__name">Broken Realms: Horrek's Dreadlance</div>
-                                    <div class="product__prices">
-                                        <div class="product__price">3657 ₽</div>
-                                    </div>
-                                    <div class="product__btns">
-                                        <a href="#" class="product__btn-cart btn">В корзину</a>
-                                        <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="catalog__pagging pagging">
-                                <a href="#" class="pagging__arrow pagging__arrow_left _icon-arrow-right"></a>
-                                <ul class="pagging__list">
-                                    <li>
-                                        <a href="" class="pagging__item">1</a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="pagging__item">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="pagging__item _active">3</a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="pagging__item">4</a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="pagging__item">5</a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="pagging__item">...</a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="pagging__item">10</a>
-                                    </li>
-                                </ul>
-                                <a href="#" class="pagging__arrow pagging__arrow_right _icon-arrow-right"></a>
-                            </div>
-                        </div>
+                      </ul>
                     </div>
+                  </div>
+                  <div class="filter-catalog__links">
+                    <a href="#" class="filter-catalog__link">Warhammer 40000</a>
+                    <a href="#" class="filter-catalog__link">Magic: the Gathering</a>
+                    <a href="#" class="filter-catalog__link">Аксессуры для игр</a>
+                    <a href="#" class="filter-catalog__link">Краски</a>
+                    <a href="#" class="filter-catalog__link">Товары для детей</a>
+                    <a href="#" class="filter-catalog__link">Аксессуары для моделизма</a>
+                  </div>
                 </div>
-            </section>
-        </main>
-        <div class="menu-open-catalog"></div>
-        @@include('html/_footer.htm',{})
-    </div>
-    @@include('html/_popup.htm',{})
-    @@include('html/_js.htm',{})
+              </div>
+              <div data-spollers class="filter-catalog__section">
+                <button type="button" data-spoller
+                  class="_spoller-active filter-catalog__title title-catalog _icon-arrow-right">Цена</button>
+                <div class="filter-catalog__content">
+                  <div class="filter-catalog__price price-filter">
+                    <div class="price-filter__inputs price-inputs">
+                      <label>
+                        <span>От</span>
+                        <input data-from class="price-inputs__input" autocomplete="off" type="number" name="form[]"
+                          data-error="Ошибка" placeholder="0">
+                      </label>
+
+                      <label>
+                        <span>До</span>
+                        <input data-to class="price-inputs__input" autocomplete="off" type="number" name="form[]"
+                          data-error="Ошибка" placeholder="22780">
+                      </label>
+                    </div>
+                    <div id="price-filter__range"></div>
+                  </div>
+                  <label class="checkbox__label">
+                    <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                    <span class="checkbox__fake"></span>
+                    <span class="checkbox__text">Только со скидкой</span>
+                  </label>
+                </div>
+              </div>
+              <div data-spollers class="filter-catalog__section">
+                <button type="button" data-spoller
+                  class="filter-catalog__title title-catalog _icon-arrow-right">Возрасты</button>
+                <div class="filter-catalog__content">
+                  <ul class="filter-catalog__list">
+                    <li class="filter-catalog__item checkbox">
+                      <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                        <span class="checkbox__fake"></span>
+                        <span class="checkbox__text">3-5 лет</span>
+                      </label>
+                    </li>
+                    <li class="filter-catalog__item checkbox">
+                      <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                        <span class="checkbox__fake"></span>
+                        <span class="checkbox__text">6-7 лет</span>
+                      </label>
+                    </li>
+                    <li class="filter-catalog__item checkbox">
+                      <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                        <span class="checkbox__fake"></span>
+                        <span class="checkbox__text">8-12 лет</span>
+                      </label>
+                    </li>
+                    <li class="filter-catalog__item checkbox">
+                      <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                        <span class="checkbox__fake"></span>
+                        <span class="checkbox__text">13-15 лет</span>
+                      </label>
+                    </li>
+                    <li class="filter-catalog__item checkbox">
+                      <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                        <span class="checkbox__fake"></span>
+                        <span class="checkbox__text">16-17 лет</span>
+                      </label>
+                    </li>
+                    <li class="filter-catalog__item checkbox">
+                      <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                        <span class="checkbox__fake"></span>
+                        <span class="checkbox__text">более 18 лет</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div data-spollers class="filter-catalog__section">
+                <button type="button" data-spoller
+                  class="filter-catalog__title title-catalog _icon-arrow-right">Наличие</button>
+                <div class="filter-catalog__content">
+                  <ul class="filter-catalog__list">
+                    <li class="filter-catalog__item checkbox">
+                      <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                        <span class="checkbox__fake"></span>
+                        <span class="checkbox__text">в наличии</span>
+                      </label>
+                    </li>
+                    <li class="filter-catalog__item checkbox">
+                      <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                        <span class="checkbox__fake"></span>
+                        <span class="checkbox__text">под заказ</span>
+                      </label>
+                    </li>
+                    <li class="filter-catalog__item checkbox">
+                      <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" name="form[]" value="Вечериночные игры">
+                        <span class="checkbox__fake"></span>
+                        <span class="checkbox__text">нет в наличии</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div data-spollers class="filter-catalog__section">
+                <button type="button" data-spoller
+                  class="filter-catalog__title title-catalog _icon-arrow-right _spoller-active">Количество
+                  игроков</button>
+                <div class="filter-catalog__content">
+                  <div id="num-players__range"></div>
+                </div>
+                <button class="filter-catalog__btn btn">Применить</button>
+              </div>
+            </div>
+            <div class="catalog__content">
+              <ul class="product__list">
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/01.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">Warhammer 40,000: Chaos Space Marines</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/02.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">На марсе</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/03.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">Broken Realms: Horrek's Dreadlance</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/01.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">Warhammer 40,000: Chaos Space Marines</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/02.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">На марсе</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/03.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">Broken Realms: Horrek's Dreadlance</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/01.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">Warhammer 40,000: Chaos Space Marines</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/02.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">На марсе</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/03.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">Broken Realms: Horrek's Dreadlance</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/01.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">Warhammer 40,000: Chaos Space Marines</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/02.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">На марсе</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+                <li class="product__item">
+                  <a href="product.html" class="product__image">
+                    <img src="@img/products-images/03.png" alt="Фотография игры">
+                  </a>
+                  <div class="product__short-description">
+                    <div class="product__count _icon-people">2-4</div>
+                    <div class="product__time _icon-time">30-60</div>
+                    <div class="product__age">18+</div>
+                  </div>
+                  <a href="product.html" class="product__name">Broken Realms: Horrek's Dreadlance</a>
+                  <div class="product__prices">
+                    <div class="product__price">3657 ₽</div>
+                  </div>
+                  <div class="product__btns">
+                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                  </div>
+                </li>
+              </ul>
+              <div class="catalog__pagging pagging">
+                <a href="#" class="pagging__arrow pagging__arrow_left _icon-arrow-right"></a>
+                <ul class="pagging__list">
+                  <li>
+                    <a href="#" class="pagging__item">1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="pagging__item">2</a>
+                  </li>
+                  <li>
+                    <a href="#" class="pagging__item _active">3</a>
+                  </li>
+                  <li>
+                    <a href="#" class="pagging__item">4</a>
+                  </li>
+                  <li>
+                    <a href="#" class="pagging__item">5</a>
+                  </li>
+                  <li>
+                    <a href="#" class="pagging__item">...</a>
+                  </li>
+                  <li>
+                    <a href="#" class="pagging__item">10</a>
+                  </li>
+                </ul>
+                <a href="#" class="pagging__arrow pagging__arrow_right _icon-arrow-right"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="menu-open-catalog"></div>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
 </body>
 
 </html>

@@ -14,7 +14,7 @@ body::after {
 .popup-show body::after {
 	opacity: 1;
 }
-.popup {
+.popup__reg {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -50,7 +50,7 @@ body::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
+	background-color: #fff;
 	padding: 20px;
 	width: 100%;
 	max-width: 900px;

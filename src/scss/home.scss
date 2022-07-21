@@ -21,24 +21,31 @@
 // ! main-slider (1 блок)
 .main-slider {
     &__slider {
+        height: rem(320);
         position: relative;
-    }
-
-    &__wrapper {
     }
 
     &__slide {
         position: relative;
-        max-width: rem(967);
-        max-height: rem(320);
+        width: 85%;
+        height: 100%;
+        // max-width: rem(967);
+        // max-height: rem(320);
         overflow: hidden;
         @media (max-width: $tablet) {
-            max-width: 100%;
+            width: 100%;
             height: 100%;
         }
     }
 
-    &__image img {
+    &__image {
+        height: 100%;
+        img {
+            object-fit: cover;
+            object-position: center top;
+            height: 100%;
+            width: 100%;
+        }
     }
     &__body {
         max-width: 100%;
@@ -114,9 +121,9 @@
             grid-template-columns: repeat(2, 1fr);
         }
         @media (max-width: 640px) {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(1, 1fr) !important;
             .catalog-btn {
-                max-width: rem(170);
+                max-width: rem(200);
                 margin: 0 auto;
                 display: block;
             }
@@ -140,8 +147,8 @@
         @media (max-width: 640px) {
             padding-bottom: 60%;
         }
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 transform: scale(1.05);
             }
         }
@@ -163,6 +170,7 @@
         line-height: 240%;
         font-weight: 700;
         position: absolute;
+        border-radius: 0 0 rem(9) rem(9);
         bottom: 0;
         left: 0;
         z-index: 1;
@@ -174,29 +182,35 @@
 // ! time-buy (3 блок)
 
 .time-buy__slider,
-.offer__slider {
+.offer__slider,
+.recently-viewed__slider {
     padding: rem(20) rem(15);
 }
 .time-buy__container,
-.offer__container {
+.offer__container,
+.recently-viewed__container {
     padding: 0 rem(25);
     position: relative;
 }
 .time-buy__button-next,
 .time-buy__button-prev,
 .offer__button-next,
-.offer__button-prev {
+.offer__button-prev,
+.recently-viewed__button-next,
+.recently-viewed__button-prev {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 .time-buy__button-prev,
-.offer__button-prev {
+.offer__button-prev,
+.recently-viewed__button-prev {
     left: rem(10);
     transform: rotate(180deg);
 }
 .time-buy__button-next,
-.offer__button-next {
+.offer__button-next,
+.recently-viewed__button-next {
     right: rem(10);
 }
 
@@ -287,8 +301,8 @@
 .contact {
     &__info {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        @include adaptiveValue("gap", 120, 10, 1140, 768);
+        grid-template-columns: 0.7fr 1fr;
+        @include adaptiveValue("gap", 100, 10, 1140, 768);
         @media (max-width: $mobile) {
             grid-template-columns: 1fr;
         }
@@ -334,42 +348,6 @@
                 width: 100%;
                 margin-bottom: rem(25);
             }
-        }
-    }
-}
-.form-questions {
-    &__item {
-        margin-bottom: rem(15);
-        label {
-            display: block;
-            margin-bottom: rem(7);
-        }
-    }
-
-    &__input {
-        width: 100%;
-        border: 1px solid rgba($mainColor, $alpha: 0.33);
-        padding: rem(14) rem(20);
-        border-radius: rem(9);
-        &::placeholder {
-            color: rgba($mainColor, $alpha: 0.33);
-            font-size: rem(15);
-        }
-    }
-    &__comment {
-        height: rem(90);
-        resize: none
-    }
-    &__btn {
-        @include adaptiveValue("font-size", 19, 16);
-        @include adaptiveValue("padding", 12, 10);
-        width: 100%;
-        margin-bottom: rem(15);
-    }
-
-    &__agree {
-        a {
-            text-decoration: underline;
         }
     }
 }

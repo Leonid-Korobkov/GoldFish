@@ -1,11 +1,59 @@
 // Заголовки, общие БЄМ блоки и проче...
+[class*="__logo"] {
+    max-width: rem(152);
+}
+.loader {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+    background: $mainColor url(../img/icons/logo.svg) center center no-repeat ;
+    background-size: 300px 300px;
+    .loader-spin {
+        width: 75px;
+        height: 75px;
+        border: 10px solid white;
+        border-radius: 50%;
+        border-top-color: $accentColor;
+        animation: spin 0.5s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50px);
+    }
+}
+.fade {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+}
+@keyframes spin {
+    from {
+        transform: translate(-50%, 50px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, 50px) rotate(360deg);
+    }
+}
 .btn {
     background: linear-gradient(184.53deg, #f9a43f 5.27%, #fb791b 91.78%);
     border-radius: rem(9);
     color: #fff;
-    padding: rem(10.5) rem(30);
+    padding: rem(10) rem(30);
     display: inline-block;
     font-weight: 700;
+    box-sizing: border-box;
+    transition: all 0.3s ease 0s;
+    border: 2px solid rgba(0, 0, 0, 0);
+    @media (any-hover: hover) {
+        &:hover {
+            color: $accentColor;
+            border-color: $accentColor;
+            background: rgb(255, 255, 255);
+        }
+    }
 }
 .btn-border {
     display: inline-block;
@@ -15,7 +63,25 @@
     font-weight: 700;
     font-size: rem(16);
     line-height: math.div(19, 16);
-    padding: rem(7) rem(19);
+    padding: rem(10) rem(19);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+            background: linear-gradient(184.53deg, #f9a43f 5.27%, #fb791b 91.78%);
+        }
+    }
+    &_gray {
+        border: 1px solid rgba(42, 42, 42, 0.19);
+        color: $mainColor;
+        opacity: 0.74;
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+                background: rgba(42, 42, 42, 0.74);
+            }
+        }
+    }
 }
 .btn-footer {
     text-align: center;
@@ -28,9 +94,6 @@ address {
 }
 // ! Меню и др
 .menu-catalog {
-    &__icon {
-    }
-
     &__body {
         transition: all 0.3s ease 0s;
         z-index: 2;
@@ -45,13 +108,28 @@ address {
         display: grid;
         opacity: 0;
         visibility: hidden;
-        overflow-x: scroll;
+        overflow: auto;
+        @media (max-width: $tablet) {
+            top: 100%;
+            width: 85%;
+            display: block;
+        }
     }
     &__wrap {
+        overflow-x: hidden;
         border-right: 2px solid rgba(42, 42, 42, 0.26);
+        transition: all 0.3s ease 0s;
+        @media (max-width: $tablet) {
+            position: relative;
+            &_transform {
+                overflow: visible;
+                transform: translateX(-100%);
+            }
+        }
     }
 
     &__title {
+        color: $mainColor;
         font-weight: 700;
         margin: rem(15) 0px rem(20) rem(61);
         line-height: math.div(19, 16);
@@ -60,11 +138,15 @@ address {
     &__list {
         border-top: 2px solid rgba(42, 42, 42, 0.26);
         padding: 0px 0px rem(35) 0px;
+        @media (max-width: $tablet) {
+            padding: 0px 0px rem(10) 0px;
+        }
     }
 
     &__item {
         transition: background 0.3s 0s;
-        position: relative;
+        display: flex;
+        align-items: center;
         @media (any-hover: hover) {
             &:hover {
                 background: $accentColor;
@@ -73,65 +155,91 @@ address {
                 }
             }
         }
+        @media (min-width: $tablet) {
+            &:hover > .sub-menu-catalog {
+                transition: all 0.3s ease 0s;
+                opacity: 1;
+                visibility: visible;
+                left: rem(255);
+            }
+            &:hover .menu-catalog__link::before {
+                transform: rotate(0deg);
+            }
+        }
     }
 
     &__link {
-        padding: rem(10) 0px rem(10) rem(30);
+        padding: rem(15) 0px rem(15) rem(30);
         font-weight: 700;
-        width: 100%;
-        height: 100%;
         text-align: left;
-    }
-    .sub-menu-active {
-        background: #ffc176;
-    }
-    ._icon-arrow-right {
+        color: $mainColor;
         transition: all 0.3s ease 0s;
-        color: #c8c5c3;
         background: none;
-        position: absolute;
-        right: rem(10);
-        top: 50%;
-        transform: translateY(-50%);
+        padding-right: 5px;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        &::before {
+            padding-right: 5px;
+            transition: all 0.3s ease 0s;
+            transform: rotate(90deg);
+            @media (max-width: $tablet) {
+                transform: rotate(0deg);
+            }
+        }
     }
 }
 .sub-menu-catalog {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: rem(255);
+    top: 0;
     font-weight: 700;
     padding: 0px rem(55) rem(30) rem(30);
-    max-width: 100%;
-    max-height: 100%;
-    // overflow: auto;
-    // overflow-y: scroll;
+    margin-left: rem(-2);
+    overflow: scroll;
+    color: $mainColor;
 
-    &__block {
-        // display: none;
-        // opacity: 0;
-        // visibility: hidden;
-        // overflow-x: scroll;
+    @media (max-width: $tablet) {
+        left: 100%;
+        width: 100%;
+        &_active {
+            visibility: visible;
+            opacity: 1;
+        }
     }
-    // .sub-menu-open {
-    //     display: block;
-    //     opacity: 1;
-    //     visibility: visible;
-    // }
-
     &__colums {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: rem(55);
+        grid-template-columns: repeat(4, 30%);
+        column-gap: rem(55);
+        row-gap: rem(30);
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+        }
     }
-
+    &__mobile-back {
+        display: none;
+        @media (max-width: $tablet) {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+    }
     &__title {
+        width: 100%;
         margin: rem(15) 0px rem(35) 0px;
         font-size: rem(20);
+        @media (max-width: $tablet) {
+            margin: rem(25) 0px rem(15) 0px;
+        }
     }
-
-    &__list {
-    }
-
-    &__item {
-    }
-
     &__link {
         display: block;
         padding: rem(10) 0px rem(10);
@@ -143,6 +251,7 @@ address {
         }
     }
 }
+
 .menu-open-wrapper {
     transition: all 0.3s ease 0s;
     position: fixed;
@@ -158,7 +267,6 @@ address {
     left: 0;
     opacity: 1;
     visibility: visible;
-    // transition: all 0.3s ease 0s;
 }
 .main-title {
     @include adaptiveValue("font-size", 32, 21);
@@ -195,6 +303,15 @@ address {
         padding: rem(30) rem(20) rem(20);
         display: flex;
         flex-direction: column;
+        .product__name {
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                    color: $accentColor;
+                }
+            }
+        }
     }
 
     &__image {
@@ -271,9 +388,6 @@ address {
             margin-left: rem(7);
             vertical-align: middle;
         }
-    }
-
-    &__btn-buy {
     }
 }
 .product__image {
@@ -376,9 +490,6 @@ address {
         display: flex;
     }
 
-    &__item {
-    }
-
     &__link {
         display: flex;
         align-items: center;
@@ -425,6 +536,80 @@ address {
         }
     }
 }
+// ! Формы
+.form {
+    &__item {
+        position: relative;
+        margin-bottom: rem(15);
+        label {
+            display: block;
+            span {
+                display: block;
+                margin-bottom: rem(7);
+            }
+        }
+    }
+    &__item-require {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0.68;
+        font-size: rem(15);
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid rgba($mainColor, $alpha: 0.33);
+        padding: rem(12) rem(20);
+        border-radius: rem(9);
+        &::placeholder {
+            color: rgba($mainColor, $alpha: 0.33);
+            font-size: rem(15);
+            font-weight: 600;
+        }
+    }
+    &__comment {
+        height: rem(90);
+        resize: none;
+    }
+    &__btn {
+        @include adaptiveValue("font-size", 19, 16);
+        @include adaptiveValue("padding", 12, 10);
+        width: 100%;
+        margin-bottom: rem(15);
+    }
+
+    &__agree {
+        a {
+            text-decoration: underline;
+        }
+    }
+    &__forget-pas {
+        text-align: right;
+        display: block;
+        margin-bottom: rem(30);
+    }
+    &__login-sms {
+        font-weight: 700;
+        font-size: rem(16);
+        border-bottom: 2px solid #f9a43f;
+        margin-bottom: rem(6);
+        display: inline-block;
+    }
+    .login-social {
+        margin-bottom: rem(26);
+        &__link {
+            display: inline-block;
+            font-size: rem(22);
+            padding: 10px;
+            border-radius: 50%;
+            border: 2px solid #d9d9d9;
+        }
+        &__text {
+            margin-bottom: rem(12);
+        }
+    }
+}
 
 // ! Checkbox
 .checkbox {
@@ -461,6 +646,7 @@ address {
         color: rgba(42, 42, 42, 0.85);
     }
     &__fake {
+        position: relative;
         width: rem(21);
         height: rem(21);
         flex: 0 0 21px;
@@ -477,4 +663,117 @@ address {
             transform: scale(0);
         }
     }
+}
+
+// ! Модальное окно регистрации и входа
+
+.reg-popup {
+    &__content {
+        @include adaptiveValue("width", 427, 300, 460, 320, 1);
+        padding: rem(40);
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        right: rem(15);
+        top: rem(15);
+    }
+
+    &__title {
+        @include adaptiveValue("font-size", 20, 16);
+        line-height: math.div(26, 22);
+        font-weight: 700;
+        margin-bottom: rem(25);
+    }
+    .registration-content__agree a {
+        text-decoration: underline;
+    }
+    .registration-content__agree {
+        opacity: 0.68;
+        font-size: rem(15);
+        margin-bottom: rem(27);
+    }
+}
+.tabs {
+    &__navigation {
+        border-bottom: 2px solid rgba(42, 42, 42, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: rem(20);
+    }
+
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 19, 16);
+        line-height: math.div(22, 19);
+        padding: rem(5) rem(15);
+    }
+
+    &__content {
+        .form__input::placeholder {
+            color: $mainColor;
+            opacity: 0.72;
+        }
+    }
+    ._tab-active {
+        border-bottom: 3px solid $mainColor;
+    }
+}
+// ! range slider
+.price-filter {
+    margin-bottom: rem(25);
+}
+.price-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(29);
+    &__input {
+        padding-left: rem(9);
+        padding-right: rem(9);
+        width: rem(65);
+        height: rem(27);
+        border: 1px solid rgba(0, 0, 0, 0.38);
+        border-radius: 9px;
+        &::placeholder {
+            opacity: 0.59;
+            color: $mainColor;
+        }
+    }
+}
+
+// ! Счетчик количество товара
+.quantity {
+    display: flex;
+    align-items: center;
+    &__button {
+        padding: rem(5);
+    }
+
+    &__input {
+        white-space: nowrap;
+        margin: rem(0) rem(5);
+        input {
+            color: $mainColor;
+            font-size: rem(22);
+            font-weight: 700;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            background: #fffbf8;
+        }
+    }
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }

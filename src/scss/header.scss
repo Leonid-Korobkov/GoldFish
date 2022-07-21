@@ -1,26 +1,37 @@
 //====================================================================================================
 
 //====================================================================================================
+
 .top-header {
 	background: $mainColor;
 	color: #fff;
+	position: relative;
+	z-index: 3;
+
 	&__body {
-		@include adaptiveValue("min-height", 82, 62);
+		@include adaptiveValue("min-height", 82, 55);
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 	}
 
 	&__logo {
-		@include adaptiveValue("min-width", 157, 80);
+		@include adaptiveValue("min-width", 157, 120);
 		@include adaptiveValue("margin-right", 33, 10);
 		img {
 			max-width: 100%;
+		}
+		@media (max-width: $mobile) {
+			margin-right: 0;
 		}
 	}
 
 	&__search {
 		flex: 1 1 auto;
 		margin-right: rem(20);
+		@media (max-width: $tablet) {
+			display: none;
+		}
 	}
 }
 .search-form {
@@ -48,7 +59,7 @@
 		border: 1px solid #e4e4e4;
 		border-radius: 0px rem(9) rem(9) 0px;
 		&::placeholder {
-			font-size: rem(12);
+			font-size: rem(14);
 			color: #929292;
 		}
 		&:focus {
@@ -67,11 +78,15 @@
 	display: flex;
 	align-items: center;
 	font-size: rem(26);
+	@include adaptiveValue("font-size", 26, 25);
 	margin-left: rem(20);
-	a:not(.actions-header__phone){
+	@media (max-width:$tablet){
+		margin-left: 0;
+	}
+	a:not(.actions-header__phone) {
 		transition: all 0.3s ease 0s;
-		@media (any-hover: hover){
-			&:hover{
+		@media (any-hover: hover) {
+			&:hover {
 				transform: scale(1.2);
 			}
 		}
@@ -82,9 +97,12 @@
 		font-size: rem(20);
 		align-items: center;
 		display: flex;
+		@media (max-width: $tablet) {
+			margin-right: 0;
+		}
 		&::before {
 			display: inline-block;
-			font-size: rem(26);
+			@include adaptiveValue("font-size", 26, 22);
 			margin-right: rem(5);
 		}
 		span {
@@ -117,7 +135,6 @@
 			justify-content: center;
 		}
 	}
-	
 }
 .bottom-header {
 	background: rgba(54, 54, 54, 0.04);
@@ -126,11 +143,14 @@
 	}
 
 	&__body {
-		min-height: rem(52);
+		@include adaptiveValue("min-height", 52, 35);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		position: relative;
+		@media (max-width:$tablet){
+			position: static;
+		}
 	}
 
 	&__catalog {
@@ -147,21 +167,30 @@
 			}
 		}
 	}
-
-	&__main-nav {
-		@include adaptiveValue("margin-right", 20, 20);
-	}
 }
 .main-nav {
+	color: $mainColor;
+	@media (max-width:$tablet){
+		padding-bottom: rem(20);
+		border-top: 2px solid  rgba(42, 42, 42, 0.26);
+	}
 	&__list {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width:$tablet){
+			flex-direction: column;
+		}
 	}
 
 	&__link {
 		position: relative;
+		display: inline-block;
 		padding: rem(5) rem(15);
 		transition: all 0.3s ease 0s;
+		@media (max-width:$tablet){
+			padding: rem(15) 0;
+			margin-left: rem(30);
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: $accentColor;
@@ -198,6 +227,10 @@
 			}
 		}
 	}
+	@media (max-width:$tablet){
+		margin-left: rem(30);
+		margin-bottom: 30px;
+	}
 }
 
 //Burger
@@ -216,6 +249,10 @@
 	cursor: pointer;
 	transition: all 0.3s ease 0s;
 	z-index: 5;
+	@media (max-width: $tablet) {
+		width: rem(20);
+		height: rem(17);
+	}
 	span,
 	&::before,
 	&::after {
@@ -226,6 +263,9 @@
 		width: 100%;
 		height: rem(2);
 		background-color: $mainColor;
+		@media (max-width: $tablet) {
+			background-color: #fff;
+		}
 	}
 	&::before {
 		top: 0;
@@ -237,12 +277,16 @@
 		top: calc(50% - rem(1));
 	}
 	.menu-open & {
-		transform: translateX(30px);
+		@media (min-width: $tablet) {
+			transform: translateX(30px);
+		}
 		span {
 			width: 0;
+			background: $accentColor;
 		}
 		&::before,
 		&::after {
+			background: $accentColor;
 		}
 		&::before {
 			top: calc(50% - rem(1));
@@ -254,13 +298,12 @@
 		}
 	}
 }
-.icon-menu:hover {
-	@media (any-hover: hover){
-		&:hover{
+.icon-menu {
+	@media (any-hover: hover) {
+		&:hover {
 			span {
 				transform: translateX(-6px);
 			}
 		}
 	}
 }
-

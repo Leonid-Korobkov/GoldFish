@@ -24,7 +24,7 @@ export function addTouchClass() {
 	// Добавление класса _touch для HTML если браузер мобильный
 	if (isMobile.any()) {
 		document.documentElement.classList.add('touch');
-	}	else document.documentElement.classList.add('pc')
+	} else document.documentElement.classList.add('pc')
 }
 // Добавление loaded для HTML после полной загрузки страницы
 export function addLoadedClass() {
@@ -423,6 +423,12 @@ export function menuInit() {
 				document.documentElement.classList.toggle("menu-open");
 				openCatalog.classList.toggle("menu-open-wrapper")
 				catalogBody.classList.toggle("_active")
+			}
+			if (e.target.closest('.menu-open-wrapper')) {
+				bodyLockToggle();
+				document.documentElement.classList.remove("menu-open");
+				openCatalog.classList.remove("menu-open-wrapper")
+				catalogBody.classList.remove("_active")
 			}
 		});
 	};

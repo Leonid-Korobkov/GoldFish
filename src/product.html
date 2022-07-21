@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Дженга"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <div class="page__main-navigation main-navigation">
+                <div class="main-navigation__container">
+                    <nav class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="index.html" class="breadcrumbs__link">Главная</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="catalog.html" class="breadcrumbs__link">Каталог</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="catalog.html" class="breadcrumbs__link">Настольные игры</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="catalog.html" class="breadcrumbs__link">Классические игры</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="#" class="breadcrumbs__current">Дженга</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <section class="page__product product">
+                <div class="product__container">
+                    <div class="product__title main-title">Дженга</div>
+                    <div class="product__body">
+                        <div class="product__about about-product">
+                            <div class="about-product__wrapper-slider">
+                                <!-- <div class="about-product__slider-mini swiper">
+                                    <ul class="about-product__wrapper-mini swiper-wrapper">
+                                        <li class="about-product__slide-mini swiper-slide">
+                                            <div class="about-product__image-mini -ibg_contain">
+                                                <img src="@img/product/01.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
+                                        <li class="about-product__slide-mini swiper-slide ">
+                                            <div class="about-product__image-mini -ibg_contain">
+                                                <img src="@img/product/02.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
+                                        <li class="about-product__slide-mini swiper-slide">
+                                            <div class="about-product__image-mini -ibg_contain ">
+                                                <img src="@img/product/03.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div> -->
+                                <!-- Главный слайдер -->
+                                <div class="about-product__slider swiper">
+                                    <ul class="about-product__wrapper swiper-wrapper">
+                                        <li class="about-product__slide swiper-slide">
+                                            <div class="about-product__image -ibg_contain">
+                                                <img src="@img/product/01.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
+                                        <li class="about-product__slide swiper-slide ">
+                                            <div class="about-product__image -ibg_contain">
+                                                <img src="@img/product/02.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
+                                        <li class="about-product__slide swiper-slide">
+                                            <div class="about-product__image -ibg_contain">
+                                                <img src="@img/product/03.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- Если нужна навигация (влево/вправо) -->
+                                    <button type="button" class="about-product__button-prev _icon-arrow-right"></button>
+                                    <button type="button" class="about-product__button-next _icon-arrow-right"></button>
+                                </div>
+                            </div>
+                            <div data-tabs class="about-product__info about-product-info">
+                                <nav data-tabs-titles class="about-product-info__navigation">
+                                    <button type="button" class="about-product-info__title">Описание</button>
+                                    <button type="button" class="about-product-info__title">Характеристики</button>
+                                    <button type="button" class="about-product-info__title">Правила</button>
+                                    <button type="button"
+                                        class="about-product-info__title _tab-active">Вопрос-ответ</button>
+                                </nav>
+                                <div data-tabs-body class="about-product-info__content">
+                                    <div class="about-product-info__body">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus
+                                        perspiciatis quia iure, dolorem quo officia enim laborum aliquid velit libero
+                                        modi, similique incidunt est illo delectus placeat cupiditate voluptatibus.
+                                        Sapiente!
+                                    </div>
+                                    <div class="about-product-info__body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, a.
+                                    </div>
+                                    <div class="about-product-info__body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, odio. Perferendis
+                                        quam odit fugiat accusantium?
+                                    </div>
+                                    <div data-spollers class="about-product-info__body spollers question-answer">
+                                        <div class="spollers__item question-answer__section">
+                                            <button type="button" data-spoller
+                                                class="spollers__title question-answer__title _icon-arrow-right">Как
+                                                оформить заказ?</button>
+                                            <div class="spollers__body question-answer__content">Lorem ipsum dolor sit
+                                                amet consectetur adipisicing elit. Facere ex odio ratione, id, nostrum
+                                                soluta accusantium vel velit perferendis voluptatem aliquid nesciunt
+                                                sequi. Eligendi officia incidunt repellendus at consequuntur dolorum!
+                                            </div>
+                                        </div>
+                                        <div class="spollers__item question-answer__section">
+                                            <button type="button" data-spoller
+                                                class="spollers__title question-answer__title _icon-arrow-right">Как
+                                                подобрать игру?</button>
+                                            <div class="spollers__body question-answer__content">
+                                                <p>Если в настольной игре
+                                                    собирается принять участие компания, нужно учитывать средний возраст
+                                                    игроков. Есть игры, которые не требуют активности и вряд ли
+                                                    понравятся
+                                                    молодёжи, а подвижные не придутся по душе пожилым людям.
+                                                </p>
+                                                <p>
+                                                    Многие игры предназначены только для большого количества участников,
+                                                    а
+                                                    другие — строго для двоих. Бывают и индивидуальные варианты, но чаще
+                                                    всего количество участников — от двух до четырёх.Количество игроков,
+                                                    на
+                                                    которое рассчитана игра, написано на её упаковке.
+                                                    Важно сразу решить, сколько человек примут участие в игре. Некоторые
+                                                    настольные игры могут быть скучны только для двоих. Если чаще будут
+                                                    играть именно двое, не стоит покупать игры, которые рассчитаны на
+                                                    большую компанию.
+                                                </p>
+                                                <p>
+                                                    Важно и то, как участники будут взаимодействовать между собой во
+                                                    время
+                                                    игры. Есть два основных варианта: каждый сам за себя или в
+                                                    команде.Реквизитом могут быть карты, игральные кости, бумага и
+                                                    карандаши, а также специальные приспособления, которые лежат в
+                                                    коробке.
+                                                </p>
+                                                <p>
+                                                    Выделяют несколько типов настольных игр: интеллектуальные,
+                                                    творческие,
+                                                    подвижные и кооперативные.Интеллектуальные больше предназначены для
+                                                    детей, которым надо развивать логику и эрудицию. В формате
+                                                    развлечений
+                                                    они смогут тренировать память и мышление. К таким играм относятся
+                                                    мемо,
+                                                    где надо запоминать картинки или слова.Стратегические и
+                                                    экономические
+                                                    развивают навыки предпринимателя и стратега. Они учат грамотному
+                                                    планированию.Творческие игры развивают воображение. Они требуют
+                                                    большей
+                                                    концентрации.
+                                                    Подвижные игры больше понравятся компаниям, потому что направлены на
+                                                    взаимодействие между игроками.
+                                                    В кооперативной игре ребёнок будет развивать речь и коммуникативные
+                                                    навыки с помощью общения с другими игроками.
+                                                </p>
+                                                <p>
+                                                    Игры выбирают и по длительности процесса: от нескольких минут до
+                                                    нескольких часов.Время игры также зависит от количества участников и
+                                                    от
+                                                    того, насколько они хорошо знают правила.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="spollers__item question-answer__section">
+                                            <button type="button" data-spoller
+                                                class="spollers__title question-answer__title _icon-arrow-right">Что
+                                                делать, если заказ не пришел?</button>
+                                            <div class="spollers__body question-answer__content">Lorem ipsum dolor sit
+                                                amet consectetur adipisicing elit. Facere ex odio ratione, id, nostrum
+                                                soluta accusantium vel velit perferendis voluptatem aliquid nesciunt
+                                                sequi. Eligendi officia incidunt repellendus at consequuntur dolorum!
+                                            </div>
+                                        </div>
+                                        <div class="spollers__item question-answer__section">
+                                            <button type="button" data-spoller
+                                                class="spollers__title question-answer__title _icon-arrow-right">Как
+                                                оплатить заказ?</button>
+                                            <div class="spollers__body question-answer__content">Lorem ipsum dolor sit
+                                                amet consectetur adipisicing elit. Facere ex odio ratione, id, nostrum
+                                                soluta accusantium vel velit perferendis voluptatem aliquid nesciunt
+                                                sequi. Eligendi officia incidunt repellendus at consequuntur dolorum!
+                                            </div>
+                                        </div>
+                                        <div class="spollers__item question-answer__section">
+                                            <button type="button" data-spoller
+                                                class="spollers__title question-answer__title _icon-arrow-right">Как
+                                                изменить заказ после оформления?</button>
+                                            <div class="spollers__body question-answer__content">Lorem ipsum dolor sit
+                                                amet consectetur adipisicing elit. Facere ex odio ratione, id, nostrum
+                                                soluta accusantium vel velit perferendis voluptatem aliquid nesciunt
+                                                sequi. Eligendi officia incidunt repellendus at consequuntur dolorum!
+                                            </div>
+                                        </div>
+                                        <div class="spollers__item question-answer__section">
+                                            <button type="button" data-spoller
+                                                class="spollers__title question-answer__title _icon-arrow-right">Как
+                                                вернуть товар?</button>
+                                            <div class="spollers__body question-answer__content">Lorem ipsum dolor sit
+                                                amet consectetur adipisicing elit. Facere ex odio ratione, id, nostrum
+                                                soluta accusantium vel velit perferendis voluptatem aliquid nesciunt
+                                                sequi. Eligendi officia incidunt repellendus at consequuntur dolorum!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__payment">
+                            <div data-da=".about-product, 760, 1" class="product__info-payment product-info-payment">
+                                <div class="product-info-payment__about-product">
+                                    <div class="product-info-payment__code-product">
+                                        <span>Код товара:</span>
+                                        <span class="product-code">842672</span>
+                                    </div>
+                                    <div class="product-info-payment__short-description">
+                                        <div class="product-info-payment__count _icon-people">2-4</div>
+                                        <div class="product-info-payment__time _icon-time">30-60</div>
+                                        <div class="product-info-payment__age">6+</div>
+                                    </div>
+                                    <div class="product-info-payment__prices">
+                                        <div class="product-info-payment__price_old">2390 ₽</div>
+                                        <div class="product-info-payment__price">1790 ₽</div>
+                                    </div>
+                                    <div class="product-info-payment__btns">
+                                        <a href="#" class="product-info-payment__btn btn">В корзину</a>
+                                        <a href="#" class="product-info-payment__btn btn-border">Купить в 1 клик</a>
+                                    </div>
+                                </div>
+                                <div data-spollers class="spollers product-info-payment__delivery-pay">
+                                    <div class="spollers__item product-info-payment__item">
+                                        <button type="button" data-spoller
+                                            class="spollers__title product-info-payment__title _icon-arrow-right">Доставка</button>
+                                        <ul class="spollers__body product-info-payment__content-spollers">
+                                            <li class="product-info-payment__content-spollers-item">Самовывоз из
+                                                магазина: сегодня</li>
+                                            <li class="product-info-payment__content-spollers-item">Самовывоз из 761
+                                                пункта: 1-3 дня</li>
+                                            <li class="product-info-payment__content-spollers-item">Курьерская доставка:
+                                                1-3 дня</li>
+                                            <li class="product-info-payment__content-spollers-item">Доставка почтой: от
+                                                3 дней</li>
+                                        </ul>
+                                    </div>
+                                    <div class="spollers__item product-info-payment__item">
+                                        <button type="button" data-spoller
+                                            class="spollers__title product-info-payment__title _icon-arrow-right">Оплата</button>
+                                        <ul class="spollers__body product-info-payment__content-spollers">
+                                            <li class="product-info-payment__content-spollers-item">Самовывоз из
+                                                магазина: сегодня</li>
+                                            <li class="product-info-payment__content-spollers-item">Самовывоз из 761
+                                                пункта: 1-3 дня</li>
+                                            <li class="product-info-payment__content-spollers-item">Курьерская доставка:
+                                                1-3 дня</li>
+                                            <li class="product-info-payment__content-spollers-item">Доставка почтой: от
+                                                3 дней</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-info-payment__ask-question">
+                                    <a href="#" class="btn-border btn-border_gray">Задать вопрос</a>
+                                </div>
+                            </div>
+                            <div class="product__buy-with buy-with">
+                                <div class="buy-with__title">С этим товаром покупают</div>
+                                <ul class="product__list">
+                                    <li class="product__item">
+                                        <a href="#" class="product__image">
+                                            <img src="@img/products-images/01.png" alt="Фотография игры">
+                                        </a>
+                                        <div class="product__short-description">
+                                            <div class="product__count _icon-people">2-4</div>
+                                            <div class="product__time _icon-time">30-60</div>
+                                            <div class="product__age">18+</div>
+                                        </div>
+                                        <a href="product.html" class="product__name">Warhammer 40,000: Chaos Space
+                                            Marines</a>
+                                        <div class="product__prices">
+                                            <div class="product__price">3657 ₽</div>
+                                        </div>
+                                        <div class="product__btns">
+                                            <a href="#" class="product__btn-cart btn">В корзину</a>
+                                            <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                        </div>
+                                    </li>
+                                    <li class="product__item">
+                                        <a href="#" class="product__image">
+                                            <img src="@img/products-images/01.png" alt="Фотография игры">
+                                        </a>
+                                        <div class="product__short-description">
+                                            <div class="product__count _icon-people">2-4</div>
+                                            <div class="product__time _icon-time">30-60</div>
+                                            <div class="product__age">18+</div>
+                                        </div>
+                                        <a href="product.html" class="product__name">Warhammer 40,000: Chaos Space
+                                            Marines</a>
+                                        <div class="product__prices">
+                                            <div class="product__price">3657 ₽</div>
+                                        </div>
+                                        <div class="product__btns">
+                                            <a href="#" class="product__btn-cart btn">В корзину</a>
+                                            <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page__recently-viewed recently-viewed">
+                <div class="recently-viewed__container">
+                    <h3 class="recently-viewed__title main-title">Успей купить</h3>
+                    <div class="recently-viewed__slider swiper">
+                        <ul class="product__list recently-viewed__wrapper swiper-wrapper">
+                            <li class="product__item recently-viewed__slide swiper-slide">
+                                <a href="#" class="product__image">
+                                    <img src="@img/products-images/01.png" alt="Фотография игры">
+                                </a>
+                                <div class="product__short-description">
+                                    <div class="product__count _icon-people">2-4</div>
+                                    <div class="product__time _icon-time">30-60</div>
+                                    <div class="product__age">18+</div>
+                                </div>
+                                <a href="product.html" class="product__name">Warhammer 40,000: Chaos Space Marines</a>
+                                <div class="product__prices">
+                                    <div class="product__price">3657 ₽</div>
+                                </div>
+                                <div class="product__btns">
+                                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                                    <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                </div>
+                            </li>
+                            <li class="product__item recently-viewed__slide swiper-slide">
+                                <a href="#" class="product__image">
+                                    <img src="@img/products-images/02.png" alt="Фотография игры">
+                                </a>
+                                <div class="product__short-description">
+                                    <div class="product__count _icon-people">2-4</div>
+                                    <div class="product__time _icon-time">30-60</div>
+                                    <div class="product__age">18+</div>
+                                </div>
+                                <a href="product.html" class="product__name">На марсе</a>
+                                <div class="product__prices">
+                                    <div class="product__price">3657 ₽</div>
+                                </div>
+                                <div class="product__btns">
+                                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                                    <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                </div>
+                            </li>
+                            <li class="product__item recently-viewed__slide swiper-slide">
+                                <a href="#" class="product__image">
+                                    <img src="@img/products-images/03.png" alt="Фотография игры">
+                                </a>
+                                <div class="product__short-description">
+                                    <div class="product__count _icon-people">2-4</div>
+                                    <div class="product__time _icon-time">30-60</div>
+                                    <div class="product__age">18+</div>
+                                </div>
+                                <a href="product.html" class="product__name">Broken Realms: Horrek's Dreadlance</a>
+                                <div class="product__prices">
+                                    <div class="product__price">3657 ₽</div>
+                                </div>
+                                <div class="product__btns">
+                                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                                    <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                </div>
+                            </li>
+                            <li class="product__item recently-viewed__slide swiper-slide">
+                                <a href="#" class="product__image">
+                                    <img src="@img/products-images/01.png" alt="Фотография игры">
+                                </a>
+                                <div class="product__short-description">
+                                    <div class="product__count _icon-people">2-4</div>
+                                    <div class="product__time _icon-time">30-60</div>
+                                    <div class="product__age">18+</div>
+                                </div>
+                                <a href="product.html" class="product__name">Orks: Ghazghkull Thraka Коллекционный
+                                    выпуск</a>
+                                <div class="product__prices">
+                                    <div class="product__price">3657 ₽</div>
+                                </div>
+                                <div class="product__btns">
+                                    <a href="#" class="product__btn-cart btn">В корзину</a>
+                                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="button" class="recently-viewed__button-prev _icon-arrow-right"></button>
+                        <button type="button" class="recently-viewed__button-next _icon-arrow-right"></button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="menu-open-catalog"></div>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

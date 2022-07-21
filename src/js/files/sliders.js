@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Autoplay, EffectFade, Pagination } from 'swiper';
+import Swiper, { Navigation, Autoplay, Pagination } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -32,72 +32,27 @@ function initSliders() {
 		new Swiper('.main-slider__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay, EffectFade, Pagination],
+			modules: [Navigation, Autoplay, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
 			centeredSlides: true,
 			spaceBetween: 5,
 			autoHeight: true,
-			speed: 1000,
-
-			//touchRatio: 0,
-			//simulateTouch: false,
+			speed: 500,
 			loop: true,
-			//preloadImages: false,
-			//lazy: true,
-
-			autoplay: {
-				delay: 4000,
-				disableOnInteraction: false,
-			},
+			preloadImages: false,
+			lazy: true,
+			// autoplay: {
+			// 	delay: 4000,
+			// 	disableOnInteraction: false,
+			// },
 
 			// Пагинация
 			pagination: {
 				el: '.main-slider__pagination',
 				clickable: true,
 			},
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "влево/вправо"
-			// navigation: {
-			// 	prevEl: '.swiper-button-prev',
-			// 	nextEl: '.swiper-button-next',
-			// },
-
-			// Брейкпоинты
-			/*
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-			// События
-			on: {
-
-			}
 		});
 	}
 
@@ -221,6 +176,86 @@ function initSliders() {
 			on: {
 
 			}
+		});
+	}
+
+	if (document.querySelector('.about-product__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.about-product__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			centeredSlides: true,
+			spaceBetween: 0,
+			speed: 600,
+			loop: true,
+
+
+			navigation: {
+				prevEl: '.about-product__button-prev',
+				nextEl: '.about-product__button-next',
+			},
+
+			thumbs: {
+				swiper: {
+					// el: '.about-product__slider-mini',
+					slidesPerView: 3,
+				}
+			},
+		});
+	}
+	if (document.querySelector('.about-product__slider-mini')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		let aboutProductSliderMini = new Swiper('.about-product__slider-mini', { // Указываем скласс нужного слайдера
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			centeredSlides: true,
+			spaceBetween: 0,
+			speed: 600,
+			loop: true,
+			direction: 'vertical',
+		});
+	}
+
+	if (document.querySelector('.recently-viewed__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.recently-viewed__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 30,
+			speed: 600,
+			loop: true,
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
+			navigation: {
+				prevEl: '.recently-viewed____button-prev',
+				nextEl: '.recently-viewed__button-next',
+			},
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				700: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1268: {
+					slidesPerView: 4,
+				},
+			},
 		});
 	}
 }

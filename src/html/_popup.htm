@@ -1,10 +1,103 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+<div id="popup" aria-hidden="true" class="popup__reg reg-popup">
+	<div class="popup__wrapper reg-popup__wrapper">
+		<div class="popup__content reg-popup__content">
+			<button data-close type="button" class="popup__close reg-popup__close">
+				<img src="@img/icons/close-menu.svg" alt="">
+			</button>
+			<h3 class="reg-popup__title">Войдите или зарегистрируйтесь</h3>
+			<div data-tabs data-tabs-animate="500" class="reg-popup__tabs tabs">
+				<nav data-tabs-titles class="tabs__navigation">
+					<button type="button" class="tabs__title _tab-active">Вход</button>
+					<button type="button" class="tabs__title">Регистрация</button>
+				</nav>
+				<div data-tabs-body class="tabs__content">
+					<div class="tabs__body login-content">
+						<form action="#" class="login-content__form form" method="post" >
+							<div class="form__item">
+								<label>
+									<span>E-mail</span>
+									<input autocomplete="off" data-error="Введен не верный E-mail" data-required="email" type="email" name="form[]"
+										placeholder="E-mail" class="form__input form__email" >
+								</label>
+							</div>
+							<div class="form__item">
+								<label>
+									<span>Пароль:</span>
+									<input autocomplete="off" type="password" name="form[]" data-error="Ошибка"
+										placeholder="Пароль" class="form__input form__pas">
+								</label>
+							</div>
+							<a href="#" class="form__forget-pas">Забыли пароль?</a>
+							<div class="form__another-ways">
+								<a href="#" class="form__login-sms">Войти с помщью SMS подтверждения</a>
+								<div href="#" class="form__login-social login-social">
+									<div class="login-social__text">Войти через аккаунт социальной сети</div>
+									<a href="#" class="login-social__link _icon-vk-reg"></a>
+									<a href="#" class="login-social__link _icon-fb-reg"></a>
+								</div>
+							</div>
+							<button type="submit" class="form__btn btn login-btn">Войти</button>
+						</form>
+					</div>
+					<div class="tabs__body registration__content">
+						<div class="tabs__body registration-content">
+							<form action="#" class="registration-content__form form" method="post">
+								<div class="form__item">
+									<label>
+										<span>Имя:</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+											placeholder="Имя" class="form__input form__name">
+									</label>
+
+								</div>
+								<div class="form__item">
+									<label>
+										<span>Фамилия:</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+											placeholder="Фамилия" class="form__input form__surname">
+									</label>
+								</div>
+								<div class="form__item">
+									<label>
+										<span>E-mail или телефон:</span>
+										<input autocomplete="off" type="email" name="form[]" data-error="Ошибка"
+											placeholder="E-mail или телефон" class="form__input form__email">
+									</label>
+								</div>
+								<div class="form__item">
+									<label>
+										<span>Пароль:</span>
+										<input autocomplete="off" type="password" name="form[]" data-error="Ошибка"
+											placeholder="Пароль" class="form__input form__pas">
+										<span class="form__item-require">мининум 6 символов</span>
+									</label>
+								</div>
+								<ul class="registration-content__agree">
+									<li class="checkbox">
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" name="form[]"
+												value="personal-data">
+											<span class="checkbox__fake"></span>
+											<span class="checkbox__text">Я согласен с политикой конфиденциальности
+												и с <a href="#">обработкой персональных данных</a></span>
+										</label>
+									</li>
+									<li class="checkbox">
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" name="form[]"
+												value="get-letter">
+											<span class="checkbox__fake"></span>
+											<span class="checkbox__text">Я хочу получать новости и узнавать об
+												акциях первым</span>
+										</label>
+									</li>
+								</ul>
+								<button type="submit" class="form__btn btn registration-btn">Зарегистрироваться</button>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>

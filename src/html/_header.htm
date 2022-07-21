@@ -2,11 +2,11 @@
 	<div class="header__top top-header">
 		<div class="top-header__container">
 			<div class="top-header__body">
-				<a href="#" class="top-header__logo">
+				<a href="index.html" class="top-header__logo">
 					<img src="@img/icons/logo.svg" alt="Логотип gold fish">
 				</a>
 				<div class="top-header__search">
-					<form action="#" data-da=".new-search-header__container, 767.98" class="search-form__item">
+					<form action="#" data-da=".new-search-header__container, 991.98" class="search-form__item">
 						<button type="submit" class="search-form__btn _icon-search"></button>
 						<input type="text" autocomplete="off" name="form[]" placeholder="Найти игру"
 							class="search-form__input">
@@ -14,10 +14,10 @@
 				</div>
 				<div class="top-header__actions actions-header">
 					<a href="tel:+74959111011" class="actions-header__phone _icon-phone"
-						data-da=".actions-header__accaunt, 767.98, 0"><span>+7 (495) 911-10-11</span></a>
+						data-da=".actions-header__accaunt, 991.98, 0"><span>+7 (495) 911-10-11</span></a>
 					<div class="actions-header__accaunt">
-						<a href="" class="actions-header__user _icon-user"></a>
-						<a href="" class="actions-header__cart _icon-cart"><span>0</span></a>
+						<a href="#" class="actions-header__user _icon-user" data-popup=".popup__reg"></a>
+						<a href="basket.html" class="actions-header__cart _icon-cart"><span>0</span></a>
 					</div>
 				</div>
 			</div>
@@ -27,351 +27,451 @@
 		<div class="bottom-header__container">
 			<div class="bottom-header__body">
 				<div class="bottom-header__catalog catalog-header">
-					<div class="catalog-header__menu menu-catalog">
+					<div data-da=".top-header__body, 991.98, 0" class="catalog-header__menu menu-catalog">
 						<button type="button" class="menu-catalog__icon icon-menu"><span></span></button>
-						<nav data-tabs class="menu-catalog__body">
-							<!-- <div data-tabs class="tabs">
-								<nav data-tabs-titles class="tabs__navigation">
-									<button type="button" class="tabs__title _tab-active">Таб №1</button>
-									<button type="button" class="tabs__title">Таб №2</button>
-									<button type="button" class="tabs__title">Таб №3</button>
-								</nav>
-								<div data-tabs-body class="tabs__content">
-									<div class="tabs__body">
-										Содержимое первого таба
-									</div>
-									<div class="tabs__body">
-										Содержимое второго таба
-									</div>
-									<div class="tabs__body">
-										Содержимое третьего таба
-									</div>
-								</div>
-							</div> -->
+						<nav class="menu-catalog__body">
 							<div class="menu-catalog__wrap">
 								<div class="menu-catalog__title">Все категории</div>
-								<ul data-tabs-titles class="menu-catalog__list">
+								<ul class="menu-catalog__list">
 									<li class="menu-catalog__item">
-										<button data-parent="1" class="menu-catalog__link">Настольные игры</button>
-										<button class="_icon-arrow-right"></button>
+										<button type="button" class="menu-catalog__link _icon-arrow-right">Настольные игры</button>
+										<div class="menu-catalog__sub-menu sub-menu-catalog">
+											<button type="button" class="sub-menu-catalog__mobile-back _icon-arrow-right">Назад</button>
+											<div class="sub-menu-catalog__title">Настольные игры</div>
+											<div class="sub-menu-catalog__colums">
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Альтернативные
+															миниатюры
+															(69)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer 40k
+															(400)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Age of Sigmar
+															(263)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Nercomunda
+															(21)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Lord of the
+															Rings(16)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Blood Bowl
+															(28)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Titanicus (4)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer:
+															Underworlds
+															(22)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Killtem (4)</a>
+													</li>
+												</ul>
+											</div>
+										</div>
 									</li>
 									<li class="menu-catalog__item">
-										<button data-parent="2" class="menu-catalog__link">Warhammer 40000</button>
-										<button class="_icon-arrow-right"></button>
+										<a href="#" class="menu-catalog__link _icon-arrow-right">Warhammer 40000</a>
+										<div class="menu-catalog__sub-menu sub-menu-catalog">
+											<button type="button" class="sub-menu-catalog__mobile-back _icon-arrow-right">Назад</button>
+											<div class="sub-menu-catalog__title">Warhammer 40000</div>
+											<div class="sub-menu-catalog__colums">
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Альтернативные
+															миниатюры
+															(69)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer 40k
+															(400)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Age of Sigmar
+															(263)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Nercomunda
+															(21)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Lord of the
+															Rings(16)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Blood Bowl
+															(28)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Titanicus (4)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer:
+															Underworlds
+															(22)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Killtem (4)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer:
+															Underworlds
+															(22)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Killtem (4)</a>
+													</li>
+												</ul>
+											</div>
+										</div>
 									</li>
 									<li class="menu-catalog__item">
-										<button data-parent="3" class="menu-catalog__link">Magic: the Gathering</button>
-										<button class="_icon-arrow-right"></button>
+										<a href="#" class="menu-catalog__link _icon-arrow-right">Magic: the
+											Gathering</a>
+										<div class="menu-catalog__sub-menu sub-menu-catalog">
+											<button type="button" class="sub-menu-catalog__mobile-back _icon-arrow-right">Назад</button>
+											<div class="sub-menu-catalog__title">Magic: the
+												Gathering</div>
+											<div class="sub-menu-catalog__colums">
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Альтернативные
+															миниатюры
+															(69)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer 40k
+															(400)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Age of Sigmar
+															(263)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Age of Sigmar
+															(263)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Age of Sigmar
+															(263)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Nercomunda
+															(21)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Lord of the
+															Rings(16)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Blood Bowl
+															(28)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Titanicus (4)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer:
+															Underworlds
+															(22)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Killtem (4)</a>
+													</li>
+												</ul>
+											</div>
+										</div>
 									</li>
 									<li class="menu-catalog__item">
-										<button data-parent="4" class="menu-catalog__link">Аксессуары для игр</button>
-										<button class="_icon-arrow-right"></button>
+										<a href="#" class="menu-catalog__link _icon-arrow-right">Аксессуары для игр</a>
+										<div class="menu-catalog__sub-menu sub-menu-catalog">
+											<button type="button" class="sub-menu-catalog__mobile-back _icon-arrow-right">Назад</button>
+											<div class="sub-menu-catalog__title">Аксессуары для игр</div>
+											<div class="sub-menu-catalog__colums">
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Альтернативные
+															миниатюры
+															(69)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer 40k
+															(400)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Age of Sigmar
+															(263)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Nercomunda
+															(21)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Lord of the
+															Rings(16)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Blood Bowl
+															(28)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Titanicus (4)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Nercomunda
+															(21)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Lord of the
+															Rings(16)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Blood Bowl
+															(28)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Titanicus (4)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Nercomunda
+															(21)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Lord of the
+															Rings(16)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Blood Bowl
+															(28)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Titanicus (4)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer:
+															Underworlds
+															(22)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Killtem (4)</a>
+													</li>
+												</ul>
+											</div>
+										</div>
 									</li>
 									<li class="menu-catalog__item">
-										<button data-parent="5" class="menu-catalog__link">Краски</button>
-										<button class="_icon-arrow-right"></button>
+										<a href="#" class="menu-catalog__link _icon-arrow-right">Краски</a>
+										<div class="menu-catalog__sub-menu sub-menu-catalog">
+											<button type="button" class="sub-menu-catalog__mobile-back _icon-arrow-right">Назад</button>
+											<div class="sub-menu-catalog__title">Краски</div>
+											<div class="sub-menu-catalog__colums">
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Альтернативные
+															миниатюры
+															(69)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer 40k
+															(400)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Age of Sigmar
+															(263)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Nercomunda
+															(21)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Lord of the
+															Rings(16)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Blood Bowl
+															(28)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Titanicus (4)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer:
+															Underworlds
+															(22)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Killtem (4)</a>
+													</li>
+												</ul>
+											</div>
+										</div>
 									</li>
 									<li class="menu-catalog__item">
-										<button data-parent="6" class="menu-catalog__link">Товары для детей</button>
-										<button class="_icon-arrow-right"></button>
+										<a href="#" class="menu-catalog__link _icon-arrow-right">Товары для детей</a>
+										<div class="menu-catalog__sub-menu sub-menu-catalog">
+											<button type="button" class="sub-menu-catalog__mobile-back _icon-arrow-right">Назад</button>
+											<div class="sub-menu-catalog__title">Товары для детей</div>
+											<div class="sub-menu-catalog__colums">
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Альтернативные
+															миниатюры
+															(69)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer 40k
+															(400)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Age of Sigmar
+															(263)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Nercomunda
+															(21)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Lord of the
+															Rings(16)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Blood Bowl
+															(28)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Titanicus (4)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer:
+															Underworlds
+															(22)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Killtem (4)</a>
+													</li>
+												</ul>
+											</div>
+										</div>
 									</li>
 									<li class="menu-catalog__item">
-										<button data-parent="7" class="menu-catalog__link">Аксессуары для
-											моделизма</button>
-										<button class="_icon-arrow-right"></button>
+										<a href="#" class="menu-catalog__link _icon-arrow-right">Аксессуары для
+											моделизма</a>
+										<div class="menu-catalog__sub-menu sub-menu-catalog">
+											<button type="button" class="sub-menu-catalog__mobile-back _icon-arrow-right">Назад</button>
+											<div class="sub-menu-catalog__title">Аксессуары для
+												моделизма</div>
+											<div class="sub-menu-catalog__colums">
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Альтернативные
+															миниатюры
+															(69)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer 40k
+															(400)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Age of Sigmar
+															(263)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Nercomunda
+															(21)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Lord of the
+															Rings(16)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Blood Bowl
+															(28)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Titanicus (4)</a>
+													</li>
+												</ul>
+												<ul class="sub-menu-catalog__list">
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warcry (49)</a>
+													</li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Warhammer:
+															Underworlds
+															(22)</a></li>
+													<li class="sub-menu-catalog__item"><a href="catalog.html"
+															class="sub-menu-catalog__link">Killtem (4)</a>
+													</li>
+												</ul>
+											</div>
+										</div>
 									</li>
 								</ul>
 							</div>
-							<div data-tabs-body class="menu-catalog__sub-menu sub-menu-catalog">
-								<div data-submenu="1" class="sub-menu-catalog__block">
-									<div class="sub-menu-catalog__title">Настольные игры</div>
-									<div class="sub-menu-catalog__colums">
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Альтернативные миниатюры (69)</a>
-											</li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer 40k (400)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Age of Sigmar (263)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Nercomunda (21)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Lord of the Rings(16)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Blood Bowl (28)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Titanicus (4)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-										</ul>
-									</div>
-								</div>
-								<div data-submenu="2" class="sub-menu-catalog__block">
-									<div class="sub-menu-catalog__title">Warhammer 40000</div>
-									<div class="sub-menu-catalog__colums">
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Альтернативные миниатюры (69)</a>
-											</li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer 40k (400)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Age of Sigmar (263)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Nercomunda (21)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Lord of the Rings(16)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Blood Bowl (28)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Titanicus (4)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-										</ul>
-									</div>
-								</div>
-								<div data-submenu="3" class="sub-menu-catalog__block">
-									<div class="sub-menu-catalog__title">Magic: the Gathering</div>
-									<div class="sub-menu-catalog__colums">
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Альтернативные миниатюры (69)</a>
-											</li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer 40k (400)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Age of Sigmar (263)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Nercomunda (21)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Lord of the Rings(16)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Blood Bowl (28)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Titanicus (4)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-										</ul>
-									</div>
-								</div>
-								<div data-submenu="4" class="sub-menu-catalog__block">
-									<div class="sub-menu-catalog__title">Аксессуары для игр</div>
-									<div class="sub-menu-catalog__colums">
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Альтернативные миниатюры (69)</a>
-											</li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer 40k (400)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Age of Sigmar (263)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Nercomunda (21)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Lord of the Rings(16)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Blood Bowl (28)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Titanicus (4)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-										</ul>
-									</div>
-								</div>
-								<div data-submenu="5" class="sub-menu-catalog__block">
-									<div class="sub-menu-catalog__title">Краски</div>
-									<div class="sub-menu-catalog__colums">
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Альтернативные миниатюры (69)</a>
-											</li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer 40k (400)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Age of Sigmar (263)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Nercomunda (21)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Lord of the Rings(16)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Blood Bowl (28)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Titanicus (4)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-										</ul>
-									</div>
-								</div>
-								<div data-submenu="6" class="sub-menu-catalog__block">
-									<div class="sub-menu-catalog__title">Товары для детей</div>
-									<div class="sub-menu-catalog__colums">
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Альтернативные миниатюры (69)</a>
-											</li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer 40k (400)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Age of Sigmar (263)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Nercomunda (21)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Lord of the Rings(16)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Blood Bowl (28)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Titanicus (4)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-										</ul>
-									</div>
-								</div>
-								<div data-submenu="7" class="sub-menu-catalog__block">
-									<div class="sub-menu-catalog__title">Аксессуары для моделизма</div>
-									<div class="sub-menu-catalog__colums">
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Альтернативные миниатюры (69)</a>
-											</li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer 40k (400)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Age of Sigmar (263)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Альтернативные миниатюры (69)</a>
-											</li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer 40k (400)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Age of Sigmar (263)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Nercomunda (21)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Lord of the Rings(16)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Blood Bowl (28)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Titanicus (4)</a></li>
-										</ul>
-										<ul class="sub-menu-catalog__list">
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warcry (49)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Warhammer: Underworlds (22)</a></li>
-											<li class="sub-menu-catalog__item"><a href="#"
-													class="sub-menu-catalog__link">Killtem (4)</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
 						</nav>
 					</div>
-					<a href="" class="bottom-header__title">Каталог</a>
+					<a href="catalog.html" class="bottom-header__title">Каталог</a>
 				</div>
-				<nav class="bottom-header__main-nav main-nav">
+				<nav data-da=".menu-catalog__wrap, 991.98" class="bottom-header__main-nav main-nav">
 					<ul class="main-nav__list">
 						<li class="main-nav__item">
 							<a href="#" class="main-nav__link">Wharhammer</a>
@@ -390,7 +490,7 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="bottom-header__social-link social-link">
+				<div data-da=".menu-catalog__wrap, 991.98" class="bottom-header__social-link social-link">
 					<a href="#" class="social-link__item _icon-insta"></a>
 					<a href="#" class="social-link__item _icon-vk"></a>
 					<a href="#" class="social-link__item _icon-fb"></a>
