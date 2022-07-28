@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Autoplay, Pagination } from 'swiper';
+import Swiper, { Navigation, Autoplay, Pagination, Thumbs } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -184,24 +184,19 @@ function initSliders() {
 		new Swiper('.about-product__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
-			observer: true,
-			observeParents: true,
+			modules: [Navigation, Thumbs],
 			slidesPerView: 1,
-			centeredSlides: true,
 			spaceBetween: 0,
-			speed: 600,
+			speed: 300,
 			loop: true,
-
 
 			navigation: {
 				prevEl: '.about-product__button-prev',
 				nextEl: '.about-product__button-next',
 			},
-
 			thumbs: {
 				swiper: {
-					// el: '.about-product__slider-mini',
+					el: '.about-product__slider-mini',
 					slidesPerView: 3,
 				}
 			},
@@ -210,14 +205,9 @@ function initSliders() {
 	if (document.querySelector('.about-product__slider-mini')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
 		let aboutProductSliderMini = new Swiper('.about-product__slider-mini', { // Указываем скласс нужного слайдера
-			observer: true,
-			observeParents: true,
 			slidesPerView: 3,
-			centeredSlides: true,
-			spaceBetween: 0,
-			speed: 600,
-			loop: true,
-			direction: 'vertical',
+			spaceBetween: 30,
+			speed: 300,
 		});
 	}
 
@@ -287,10 +277,48 @@ function initSlidersScroll() {
 		}
 	}
 }
+initSliders();
 
-window.addEventListener("load", function (e) {
-	// Запуск инициализации слайдеров
-	initSliders();
-	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-	//initSlidersScroll();
-});
+// window.addEventListener("load", function (e) {
+// 	// Запуск инициализации слайдеров
+// 	initSliders();
+// 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
+// 	//initSlidersScroll();
+// });
+
+	// const bigSlider = new Swiper('.about-product__slider', { // Указываем скласс нужного слайдера
+	// 	// Подключаем модули слайдера
+	// 	// для конкретного случая
+	// 	modules: [Navigation, Thumbs],
+	// 	// observer: true,
+	// 	// observeParents: true,
+	// 	slidesPerView: 1,
+	// 	// centeredSlides: true,
+	// 	spaceBetween: 0,
+	// 	speed: 600,
+	// 	// loop: true,
+
+
+	// 	navigation: {
+	// 		prevEl: '.about-product__button-prev',
+	// 		nextEl: '.about-product__button-next',
+	// 	},
+	// 	thumbs: {
+	// 		swiper: {
+	// 			el: '.about-product__slider-mini',
+	// 			slidesPerView: 3,
+	// 		}
+	// 	},
+	// });
+
+
+	// const aboutProductSliderMini = new Swiper('.about-product__slider-mini', { // Указываем скласс нужного слайдера
+	// 	// observer: true,
+	// 	// observeParents: true,
+	// 	slidesPerView: 3,
+	// 	// centeredSlides: true,
+	// 	spaceBetween: 30,
+	// 	speed: 600,
+	// 	// loop: true,
+	// 	// direction: 'vertical',
+	// })

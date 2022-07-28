@@ -9,7 +9,7 @@
     top: 0;
     bottom: 0;
     z-index: 10000;
-    background: $mainColor url(../img/icons/logo.svg) center center no-repeat ;
+    background: $mainColor url(../img/icons/logo.svg) center center no-repeat;
     background-size: 300px 300px;
     .loader-spin {
         width: 75px;
@@ -402,6 +402,9 @@ address {
 }
 .product__image {
     position: relative;
+    img {
+        max-height: 168px;
+    }
     .product__sale {
         position: absolute;
         right: 0;

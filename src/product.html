@@ -13,19 +13,19 @@
                     <nav class="breadcrumbs">
                         <ul class="breadcrumbs__list">
                             <li class="breadcrumbs__item">
-                                <a href="index.html" class="breadcrumbs__link">Главная</a>
+                                <a href="index.html" aria-label="test" class="breadcrumbs__link">Главная</a>
                             </li>
                             <li class="breadcrumbs__item">
-                                <a href="catalog.html" class="breadcrumbs__link">Каталог</a>
+                                <a href="catalog.html" aria-label="test" class="breadcrumbs__link">Каталог</a>
                             </li>
                             <li class="breadcrumbs__item">
-                                <a href="catalog.html" class="breadcrumbs__link">Настольные игры</a>
+                                <a href="catalog.html" aria-label="test" class="breadcrumbs__link">Настольные игры</a>
                             </li>
                             <li class="breadcrumbs__item">
-                                <a href="catalog.html" class="breadcrumbs__link">Классические игры</a>
+                                <a href="catalog.html" aria-label="test" class="breadcrumbs__link">Классические игры</a>
                             </li>
                             <li class="breadcrumbs__item">
-                                <a href="#" class="breadcrumbs__current">Дженга</a>
+                                <a href="#" aria-label="test" class="breadcrumbs__current">Дженга</a>
                             </li>
                         </ul>
                     </nav>
@@ -38,25 +38,6 @@
                     <div class="product__body">
                         <div class="product__about about-product">
                             <div class="about-product__wrapper-slider">
-                                <!-- <div class="about-product__slider-mini swiper">
-                                    <ul class="about-product__wrapper-mini swiper-wrapper">
-                                        <li class="about-product__slide-mini swiper-slide">
-                                            <div class="about-product__image-mini -ibg_contain">
-                                                <img src="@img/product/01.jpg" alt="Дженга">
-                                            </div>
-                                        </li>
-                                        <li class="about-product__slide-mini swiper-slide ">
-                                            <div class="about-product__image-mini -ibg_contain">
-                                                <img src="@img/product/02.jpg" alt="Дженга">
-                                            </div>
-                                        </li>
-                                        <li class="about-product__slide-mini swiper-slide">
-                                            <div class="about-product__image-mini -ibg_contain ">
-                                                <img src="@img/product/03.jpg" alt="Дженга">
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div> -->
                                 <!-- Главный слайдер -->
                                 <div class="about-product__slider swiper">
                                     <ul class="about-product__wrapper swiper-wrapper">
@@ -75,10 +56,40 @@
                                                 <img src="@img/product/03.jpg" alt="Дженга">
                                             </div>
                                         </li>
+                                        <li class="about-product__slide swiper-slide">
+                                            <div class="about-product__image -ibg_contain">
+                                                <img src="@img/product/01.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
                                     </ul>
                                     <!-- Если нужна навигация (влево/вправо) -->
                                     <button type="button" class="about-product__button-prev _icon-arrow-right"></button>
                                     <button type="button" class="about-product__button-next _icon-arrow-right"></button>
+                                </div>
+                                <!-- Мини слайдер -->
+                                <div class="about-product__slider-mini swiper">
+                                    <ul class="about-product__wrapper-mini swiper-wrapper">
+                                        <li class="about-product__slide-mini swiper-slide">
+                                            <div class="about-product__image-mini -ibg_contain">
+                                                <img src="@img/product/01.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
+                                        <li class="about-product__slide-mini swiper-slide ">
+                                            <div class="about-product__image-mini -ibg_contain">
+                                                <img src="@img/product/02.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
+                                        <li class="about-product__slide-mini swiper-slide">
+                                            <div class="about-product__image-mini -ibg_contain ">
+                                                <img src="@img/product/03.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
+                                        <li class="about-product__slide-mini swiper-slide">
+                                            <div class="about-product__image-mini -ibg_contain ">
+                                                <img src="@img/product/03.jpg" alt="Дженга">
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div data-tabs class="about-product__info about-product-info">
@@ -233,8 +244,8 @@
                                         <div class="product-info-payment__price">1790 ₽</div>
                                     </div>
                                     <div class="product-info-payment__btns">
-                                        <a href="#" class="product-info-payment__btn btn">В корзину</a>
-                                        <a href="#" class="product-info-payment__btn btn-border">Купить в 1 клик</a>
+                                        <a href="#" aria-label="test" class="product-info-payment__btn btn">В корзину</a>
+                                        <a href="#" aria-label="test" class="product-info-payment__btn btn-border">Купить в 1 клик</a>
                                     </div>
                                 </div>
                                 <div data-spollers class="spollers product-info-payment__delivery-pay">
@@ -268,14 +279,14 @@
                                     </div>
                                 </div>
                                 <div class="product-info-payment__ask-question">
-                                    <a href="#" class="btn-border btn-border_gray">Задать вопрос</a>
+                                    <a href="#" aria-label="test" class="btn-border btn-border_gray">Задать вопрос</a>
                                 </div>
                             </div>
                             <div class="product__buy-with buy-with">
                                 <div class="buy-with__title">С этим товаром покупают</div>
                                 <ul class="product__list">
                                     <li class="product__item">
-                                        <a href="#" class="product__image">
+                                        <a href="#" aria-label="test" class="product__image">
                                             <img src="@img/products-images/01.png" alt="Фотография игры">
                                         </a>
                                         <div class="product__short-description">
@@ -289,12 +300,12 @@
                                             <div class="product__price">3657 ₽</div>
                                         </div>
                                         <div class="product__btns">
-                                            <a href="#" class="product__btn-cart btn">В корзину</a>
-                                            <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                            <a href="#" aria-label="test" class="product__btn-cart btn">В корзину</a>
+                                            <a href="#" aria-label="test" class="product__btn-buy btn-border">Купить в 1 клик</a>
                                         </div>
                                     </li>
                                     <li class="product__item">
-                                        <a href="#" class="product__image">
+                                        <a href="#" aria-label="test" class="product__image">
                                             <img src="@img/products-images/01.png" alt="Фотография игры">
                                         </a>
                                         <div class="product__short-description">
@@ -308,8 +319,8 @@
                                             <div class="product__price">3657 ₽</div>
                                         </div>
                                         <div class="product__btns">
-                                            <a href="#" class="product__btn-cart btn">В корзину</a>
-                                            <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                            <a href="#" aria-label="test" class="product__btn-cart btn">В корзину</a>
+                                            <a href="#" aria-label="test" class="product__btn-buy btn-border">Купить в 1 клик</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -325,7 +336,7 @@
                     <div class="recently-viewed__slider swiper">
                         <ul class="product__list recently-viewed__wrapper swiper-wrapper">
                             <li class="product__item recently-viewed__slide swiper-slide">
-                                <a href="#" class="product__image">
+                                <a href="#" aria-label="test" class="product__image">
                                     <img src="@img/products-images/01.png" alt="Фотография игры">
                                 </a>
                                 <div class="product__short-description">
@@ -338,12 +349,12 @@
                                     <div class="product__price">3657 ₽</div>
                                 </div>
                                 <div class="product__btns">
-                                    <a href="#" class="product__btn-cart btn">В корзину</a>
-                                    <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                    <a href="#" aria-label="test" class="product__btn-cart btn">В корзину</a>
+                                    <a href="#" aria-label="test" class="product__btn-buy btn-border">Купить в 1 клик</a>
                                 </div>
                             </li>
                             <li class="product__item recently-viewed__slide swiper-slide">
-                                <a href="#" class="product__image">
+                                <a href="#" aria-label="test" class="product__image">
                                     <img src="@img/products-images/02.png" alt="Фотография игры">
                                 </a>
                                 <div class="product__short-description">
@@ -356,12 +367,12 @@
                                     <div class="product__price">3657 ₽</div>
                                 </div>
                                 <div class="product__btns">
-                                    <a href="#" class="product__btn-cart btn">В корзину</a>
-                                    <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                    <a href="#" aria-label="test" class="product__btn-cart btn">В корзину</a>
+                                    <a href="#" aria-label="test" class="product__btn-buy btn-border">Купить в 1 клик</a>
                                 </div>
                             </li>
                             <li class="product__item recently-viewed__slide swiper-slide">
-                                <a href="#" class="product__image">
+                                <a href="#" aria-label="test" class="product__image">
                                     <img src="@img/products-images/03.png" alt="Фотография игры">
                                 </a>
                                 <div class="product__short-description">
@@ -374,12 +385,12 @@
                                     <div class="product__price">3657 ₽</div>
                                 </div>
                                 <div class="product__btns">
-                                    <a href="#" class="product__btn-cart btn">В корзину</a>
-                                    <a href="" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                    <a href="#" aria-label="test" class="product__btn-cart btn">В корзину</a>
+                                    <a href="#" aria-label="test" class="product__btn-buy btn-border">Купить в 1 клик</a>
                                 </div>
                             </li>
                             <li class="product__item recently-viewed__slide swiper-slide">
-                                <a href="#" class="product__image">
+                                <a href="#" aria-label="test" class="product__image">
                                     <img src="@img/products-images/01.png" alt="Фотография игры">
                                 </a>
                                 <div class="product__short-description">
@@ -393,8 +404,8 @@
                                     <div class="product__price">3657 ₽</div>
                                 </div>
                                 <div class="product__btns">
-                                    <a href="#" class="product__btn-cart btn">В корзину</a>
-                                    <a href="#" class="product__btn-buy btn-border">Купить в 1 клик</a>
+                                    <a href="#" aria-label="test" class="product__btn-cart btn">В корзину</a>
+                                    <a href="#" aria-label="test" class="product__btn-buy btn-border">Купить в 1 клик</a>
                                 </div>
                             </li>
                         </ul>

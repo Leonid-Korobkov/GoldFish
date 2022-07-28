@@ -20,7 +20,8 @@
     &__slider {
         background: #ffffff;
         border: 1px solid rgba(217, 217, 217, 0.39);
-        border-radius: 9px;
+        border-radius: rem(20);
+        margin-bottom: rem(20);
     }
 
     &__image {
@@ -29,9 +30,25 @@
     }
 
     &__slider-mini {
-        max-height: rem(350);
+        width: 100%;
     }
-
+    &__slide-mini {
+        height: rem(85);
+        width: 100%;
+        border-radius: rem(9);
+        background: #fff;
+        border: 1px solid rgba(217, 217, 217, 0.39);
+        overflow: hidden;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: border-color 0.3s ease 0s;
+        z-index: 2;
+    }
+    .swiper-slide-thumb-active {
+        border-color: $accentColor;
+    }
     &__image-mini {
         width: rem(75);
         height: rem(75);
@@ -201,7 +218,7 @@
 }
 
 .about-product-info {
-    margin-top: rem(75);
+    margin-top: rem(35);
 
     &__navigation {
         display: flex;
@@ -211,9 +228,11 @@
         line-height: math.div(26, 22);
         border-bottom: 2px solid rgba(42, 42, 42, 0.12);
         overflow-x: scroll;
-        // padding-bottom: rem(10);
         @media (max-width: em(1050)) {
-            &::-webkit-scrollbar {
+        padding-bottom: rem(10);
+        border-bottom: none;
+            &::-webkit-scrollbar,
+            &::scrollbar {
                 width: 5px; /* ширина всей полосы прокрутки */
                 height: 15px;
             }
