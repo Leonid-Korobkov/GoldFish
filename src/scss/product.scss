@@ -229,8 +229,8 @@
         border-bottom: 2px solid rgba(42, 42, 42, 0.12);
         overflow-x: scroll;
         @media (max-width: em(1050)) {
-        padding-bottom: rem(10);
-        border-bottom: none;
+            padding-bottom: rem(10);
+            border-bottom: none;
             &::-webkit-scrollbar,
             &::scrollbar {
                 width: 5px; /* ширина всей полосы прокрутки */
@@ -273,7 +273,7 @@
     &__body {
         transition: all 0.5s ease 0s;
         padding-top: 25px;
-        animation: animateShow .3s linear;
+        animation: animateShow 0.3s linear;
     }
     .question-answer {
         padding-top: 0;

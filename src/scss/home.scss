@@ -325,6 +325,7 @@
     }
     &__icon {
         @include adaptiveValue("font-size", 30, 20);
+        white-space: nowrap;
     }
     &__subtitle {
         font-weight: 700;
@@ -333,6 +334,7 @@
         @include adaptiveValue("margin-bottom", 21, 15);
     }
     &__map {
+        max-width: 100%;
         #map {
             border-radius: rem(9);
             width: 100%;

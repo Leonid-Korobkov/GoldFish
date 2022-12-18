@@ -423,26 +423,33 @@
 							</address>
 							<div class="contact__questions">
 								<h5 class="contact__subtitle">Остались вопросы?</h5>
-								<form action="#" class="contact__form form">
+								<form action="files/mail.php" method="post" class="contact__form form">
 									<div class="form__item">
 										<label>
 											<span>Ваше имя</span>
-											<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имя"
+											<input autocomplete="off" type="text" name="Имя" placeholder="Имя"
 												class="form__input form__name">
 										</label>
 									</div>
 									<div class="form__item">
 										<label>
 											<span>Ваш телефон</span>
-											<input autocomplete="off" type="tel" name="form[]" placeholder="+7 (___) ___-__-__"
+											<input autocomplete="off" type="tel" name="Телефон" placeholder="+7 (___) ___-__-__"
 												data-error="Ошибка" class="form__input form__phone input">
 										</label>
 
 									</div>
 									<div class="form__item">
 										<label>
+											<span>Ваш Email</span>
+											<input autocomplete="off" type="email" name="E-mail" placeholder="E-mail"  class="form__input form__email input">
+										</label>
+
+									</div>
+									<div class="form__item">
+										<label>
 											<span>Ваш комментарий</span>
-											<textarea name="form[]" placeholder="Комментарий" class="form__input form__comment"></textarea>
+											<textarea name="message" placeholder="Комментарий" class="form__input form__comment"></textarea>
 										</label>
 										<!-- <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Комментарий" class="form__input form__comment" id="form__comment"> -->
 
@@ -455,7 +462,7 @@
 							</div>
 						</div>
 						<div data-da=".contact__connect, 767.98, 1" class="contact__map">
-							<div id="map"></div>
+							<div id="map" style="width: 100%;"></div>
 						</div>
 					</div>
 				</div>

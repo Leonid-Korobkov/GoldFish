@@ -80,7 +80,7 @@ flsForms.formFieldsInit({ viewPass: true });
 
 /* Oтправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль формы "колличество" */
 flsForms.formQuantity();
@@ -183,7 +183,6 @@ import * as flsScroll from "./files/scroll/scroll.js";
 /* Динамический адаптив */
 // Документация: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
 import "./libs/dynamic_adapt.js";
-
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
 
@@ -192,4 +191,5 @@ import "./libs/dynamic_adapt.js";
 // ========================================================================================================================================================================================================================================================
 /* Подключаем файлы со своим кодом */
 import "./files/script.js";
+// import "./libs/just-validate3.3.3.min.js";
 //============================================================================================================================================================================================================================================
